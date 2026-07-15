@@ -1,101 +1,103 @@
 # CustomizeLib 3.8 — MelonLoader port
 
-Port non officiel de `CustomizeLib.BepInEx` pour **Plants vs. Zombies Fusion 3.8**, **MelonLoader 0.7.3**, **IL2CPP** et **.NET 6**.
+[Version française](README_FR.md)
+
+Unofficial port of `CustomizeLib.BepInEx` for **Plants vs. Zombies Fusion 3.8**, **MelonLoader 0.7.3**, **IL2CPP**, and **.NET 6**.
 
 > Original CustomizeLib by **Infinite75**. MelonLoader port maintained by **Hubtech280**.
 
-## État du port
+## Port status
 
-- MelonLoader détecte et charge la bibliothèque sous le nom `PVZCustomization v3.8.0-ml.1`.
-- Le projet compile contre les assemblies exactes de PvZ Fusion 3.8 et MelonLoader 0.7.3.
-- Un mod consommateur basé sur `CorePlugin` compile contre cette version.
-- Une validation statique confirme l'absence de dépendance externe à BepInEx.
-- Les tests complets de toutes les fonctionnalités en jeu restent en cours.
+- MelonLoader detects and loads the library as `PVZCustomization v3.8.0-ml.1`.
+- The project builds against the exact PvZ Fusion 3.8 and MelonLoader 0.7.3 assemblies.
+- A consumer mod based on `CorePlugin` successfully compiles against this port.
+- Static validation confirms that the resulting assembly has no external BepInEx dependency.
+- Full in-game coverage of every CustomizeLib feature is still being tested.
 
-Cette version conserve le nom d'assembly et le namespace `CustomizeLib.BepInEx` afin de limiter les changements nécessaires dans les mods existants. Elle ne charge toutefois aucune DLL BepInEx.
+The port preserves the `CustomizeLib.BepInEx` assembly name and namespace to reduce the changes required by existing mods. It does not load any BepInEx DLL.
 
 ## Installation
 
-1. Installe MelonLoader 0.7.3 sur PvZ Fusion 3.8.
-2. Lance une première fois le jeu pour générer `MelonLoader/Il2CppAssemblies`.
-3. Retire toute ancienne copie BepInEx ou MelonLoader de CustomizeLib.
-4. Copie `CustomizeLib.BepInEx.dll` dans le dossier `Mods` du jeu.
-5. Place les skins externes dans `Mods/Skin`.
+1. Install MelonLoader 0.7.3 on PvZ Fusion 3.8.
+2. Launch the game once so that `MelonLoader/Il2CppAssemblies` is generated.
+3. Remove every older BepInEx or MelonLoader copy of CustomizeLib.
+4. Copy `CustomizeLib.BepInEx.dll` into the game's `Mods` directory.
+5. Place external skins in `Mods/Skin`.
 
-Ne charge pas simultanément les versions BepInEx et MelonLoader de CustomizeLib.
+Do not load the BepInEx and MelonLoader versions of CustomizeLib at the same time.
 
-## Utilisation depuis un mod
+## Using the library from a mod
 
-Un ancien mod compilé pour BepInEx n'est pas forcément compatible tel quel. S'il référence directement les assemblies BepInEx, recompile-le pour MelonLoader.
+A mod previously compiled for BepInEx is not guaranteed to work unchanged. Recompile it for MelonLoader if it directly references BepInEx assemblies.
 
-Exemple minimal basé sur `CorePlugin` :
+Minimal `CorePlugin` example:
 
 ```csharp
 using CustomizeLib.BepInEx;
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(MonMod), "Mon mod", "1.0.0", "Auteur")]
+[assembly: MelonInfo(typeof(MyMod), "My mod", "1.0.0", "Author")]
 [assembly: HarmonyDontPatchAll]
 
-public sealed class MonMod : CorePlugin
+public sealed class MyMod : CorePlugin
 {
     public override void OnStart()
     {
-        // Enregistre ici les plantes, zombies, cartes, etc.
+        // Register plants, zombies, cards, and other content here.
     }
 }
 ```
 
-Le projet du mod doit référencer :
+The consumer project should reference:
 
-- `CustomizeLib.BepInEx.dll` ;
-- `MelonLoader/net6` ;
-- les assemblies de `MelonLoader/Il2CppAssemblies` ;
-- `Il2Cpp` pour les types générés du jeu, si nécessaire.
+- `CustomizeLib.BepInEx.dll`;
+- `MelonLoader/net6`;
+- the assemblies from `MelonLoader/Il2CppAssemblies`;
+- the `Il2Cpp` namespace for generated game types when required.
 
-Conserve `HarmonyDontPatchAll` : `CorePlugin` initialise lui-même les patches du mod.
+Keep `HarmonyDontPatchAll`: `CorePlugin` initializes the mod's patches itself.
 
-## Compilation
+## Building from source
 
-Les assemblies du jeu et de MelonLoader ne sont pas distribuées dans ce dépôt.
+The game and MelonLoader assemblies are not distributed in this repository.
 
-Avec une installation complète du jeu :
-
-```powershell
-dotnet build src/CustomizeLib.BepInEx.csproj -c Release `
-  -p:PVZF_GAME_DIR="C:\Chemin\Vers\PlantsVsZombiesRH"
-```
-
-Ou en indiquant directement le dossier de références :
+Using a complete game installation:
 
 ```powershell
 dotnet build src/CustomizeLib.BepInEx.csproj -c Release `
-  -p:ReferenceRoot="C:\Chemin\Vers\PlantsVsZombiesRH\MelonLoader"
+  -p:PVZF_GAME_DIR="C:\Path\To\PlantsVsZombiesRH"
 ```
 
-La DLL est générée dans `build/CustomizeLib.BepInEx.dll`.
+Alternatively, provide the MelonLoader reference directory directly:
 
-## Changements propres au port
+```powershell
+dotnet build src/CustomizeLib.BepInEx.csproj -c Release `
+  -p:ReferenceRoot="C:\Path\To\PlantsVsZombiesRH\MelonLoader"
+```
 
-- cycle de vie et journalisation reliés à MelonLoader ;
-- patches Harmony gérés par l'instance Harmony de MelonLoader ;
-- types du jeu adaptés aux namespaces générés par Il2CppInterop ;
-- coroutines manquantes reconstruites depuis la DLL 3.8 ;
-- skins déplacés de `BepInEx/plugins/Skin` vers `Mods/Skin` ;
-- ancien patcher `MapValue.BepInEx` remplacé par une table en mémoire intégrée ;
-- petite couche de compatibilité source pour `BasePlugin`, la journalisation et les coroutines BepInEx utilisées par CustomizeLib.
+The output is written to `build/CustomizeLib.BepInEx.dll`.
 
-Cette couche n'est pas une implémentation générale de BepInEx.
+## Port-specific changes
 
-## Rapporter un problème
+- BepInEx lifecycle and logging bridged to MelonLoader;
+- Harmony patches managed through the MelonLoader Harmony instance;
+- game types adapted to the namespaces generated by Il2CppInterop;
+- missing coroutines reconstructed from the 3.8 DLL;
+- external skin directory moved from `BepInEx/plugins/Skin` to `Mods/Skin`;
+- former `MapValue.BepInEx` patcher dependency replaced with an integrated in-memory table;
+- small source-compatibility layer for the BepInEx `BasePlugin`, logging, and coroutine APIs used by CustomizeLib.
 
-Ouvre une issue avec :
+This compatibility layer is not a general BepInEx implementation.
 
-- la version exacte du jeu et de MelonLoader ;
-- le journal MelonLoader complet ;
-- le mod consommateur concerné ;
-- les étapes permettant de reproduire le problème.
+## Reporting an issue
 
-## Attribution et licence
+Open an issue and include:
 
-CustomizeLib a été créée par **Infinite75**. Le code de base fourni pour ce port ne contenait pas de fichier de licence ; aucune licence supplémentaire n'est donc ajoutée ici. Vérifie les conditions de l'auteur original avant toute redistribution ou réutilisation au-delà de ce port.
+- the exact game and MelonLoader versions;
+- the complete MelonLoader log;
+- the affected consumer mod and its version;
+- clear reproduction steps.
+
+## Attribution and license
+
+CustomizeLib was created by **Infinite75**. The source material supplied for this port did not contain a license file, so this repository does not add or claim an additional license. Check the original author's terms before redistributing or reusing the original work beyond this compatibility port.

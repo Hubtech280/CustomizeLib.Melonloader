@@ -1,13 +1,15 @@
-# Contribuer
+# Contributing
 
-Ce port cible précisément PvZ Fusion 3.8 et MelonLoader 0.7.3.
+[Version française](CONTRIBUTING_FR.md)
 
-Avant de proposer un changement :
+This port specifically targets PvZ Fusion 3.8 and MelonLoader 0.7.3.
 
-1. compile le projet en Release avec les assemblies IL2CPP de cette version ;
-2. ne commit aucune DLL du jeu, de MelonLoader ou de BepInEx ;
-3. vérifie que l'assembly produit ne référence pas BepInEx ;
-4. décris les tests effectués en jeu et joins les logs utiles ;
-5. garde les corrections limitées au problème traité.
+Before submitting a change:
 
-Les changements nécessitant une autre version du jeu doivent être isolés et documentés : les signatures IL2CPP peuvent changer entre deux versions.
+1. build the project in Release mode against the IL2CPP assemblies generated for this exact game version;
+2. do not commit any DLL from the game, MelonLoader, or BepInEx;
+3. verify that the resulting assembly has no BepInEx assembly reference;
+4. describe the in-game tests you performed and attach relevant logs;
+5. keep the change focused on the issue being addressed.
+
+Changes for another game version must be isolated and clearly documented because IL2CPP signatures may change between releases.

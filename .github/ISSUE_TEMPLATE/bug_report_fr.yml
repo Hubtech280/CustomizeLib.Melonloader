@@ -1,20 +1,20 @@
-name: Bug report
-description: Report a problem with the CustomizeLib MelonLoader port
-title: "[Bug] "
+name: Rapport de bug (français)
+description: Signaler un problème avec le port MelonLoader de CustomizeLib
+title: "[Bug][FR] "
 labels:
   - bug
 body:
   - type: input
     id: game-version
     attributes:
-      label: PvZ Fusion version
+      label: Version de PvZ Fusion
       placeholder: "3.8"
     validations:
       required: true
   - type: input
     id: melonloader-version
     attributes:
-      label: MelonLoader version
+      label: Version de MelonLoader
       placeholder: "0.7.3"
     validations:
       required: true
@@ -22,31 +22,31 @@ body:
     id: description
     attributes:
       label: Description
-      description: Explain what happened and what you expected to happen.
+      description: Explique le comportement observé et le comportement attendu.
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
-      label: Reproduction steps
+      label: Étapes de reproduction
       placeholder: |
-        1. Install...
-        2. Launch...
-        3. Observe...
+        1. Installer...
+        2. Lancer...
+        3. Observer...
     validations:
       required: true
   - type: textarea
     id: logs
     attributes:
-      label: MelonLoader log
-      description: Paste the complete log or attach Latest.log.
+      label: Journal MelonLoader
+      description: Colle le journal complet ou joins le fichier Latest.log.
       render: text
     validations:
       required: true
   - type: textarea
     id: mods
     attributes:
-      label: Installed mods
-      description: List every mod using CustomizeLib and its version.
+      label: Mods installés
+      description: Indique les mods qui utilisent CustomizeLib et leurs versions.
     validations:
       required: true
