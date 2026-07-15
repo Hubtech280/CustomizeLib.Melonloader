@@ -1,0 +1,10 @@
+.vs/
+.idea/
+.vscode/
+src/bin/
+src/obj/
+build/
+artifacts/
+*.user
+*.suo
+*.nupkg

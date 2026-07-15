@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>annotations</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>CustomizeLib.BepInEx</AssemblyName>
+    <RootNamespace>CustomizeLib.BepInEx</RootNamespace>
+    <Version>3.8.0-ml.1</Version>
+    <!-- Preserve the original 3.8 DLL identity for existing CustomizeLib references. -->
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>3.8.0.0</FileVersion>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>../build/</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ReferenceRoot Condition="'$(ReferenceRoot)' == '' and '$(PVZF_GAME_DIR)' != ''">$(PVZF_GAME_DIR)/MelonLoader</ReferenceRoot>
+    <MelonLoaderRefs>$(ReferenceRoot)/net6</MelonLoaderRefs>
+    <Il2CppRefs>$(ReferenceRoot)/Il2CppAssemblies</Il2CppRefs>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="MelonLoader" HintPath="$(MelonLoaderRefs)/MelonLoader.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(MelonLoaderRefs)/0Harmony.dll" Private="false" />
+    <Reference Include="Il2CppInterop.Runtime" HintPath="$(MelonLoaderRefs)/Il2CppInterop.Runtime.dll" Private="false" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe" HintPath="$(MelonLoaderRefs)/System.Runtime.CompilerServices.Unsafe.dll" Private="false" />
+
+    <Reference Include="Assembly-CSharp" HintPath="$(Il2CppRefs)/Assembly-CSharp.dll" Private="false" />
+    <Reference Include="Il2CppCore" HintPath="$(Il2CppRefs)/Il2CppCore.dll" Private="false" />
+    <Reference Include="Il2Cppmscorlib" HintPath="$(Il2CppRefs)/Il2Cppmscorlib.dll" Private="false" />
+    <Reference Include="Il2CppSystem.Core" HintPath="$(Il2CppRefs)/Il2CppSystem.Core.dll" Private="false" />
+    <Reference Include="Unity.TextMeshPro" HintPath="$(Il2CppRefs)/Unity.TextMeshPro.dll" Private="false" />
+    <Reference Include="Unity.VisualScripting.Core" HintPath="$(Il2CppRefs)/Unity.VisualScripting.Core.dll" Private="false" />
+    <Reference Include="UnityEngine.AssetBundleModule" HintPath="$(Il2CppRefs)/UnityEngine.AssetBundleModule.dll" Private="false" />
+    <Reference Include="UnityEngine.AudioModule" HintPath="$(Il2CppRefs)/UnityEngine.AudioModule.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(Il2CppRefs)/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.InputLegacyModule" HintPath="$(Il2CppRefs)/UnityEngine.InputLegacyModule.dll" Private="false" />
+    <Reference Include="UnityEngine.Physics2DModule" HintPath="$(Il2CppRefs)/UnityEngine.Physics2DModule.dll" Private="false" />
+    <Reference Include="UnityEngine.UI" HintPath="$(Il2CppRefs)/UnityEngine.UI.dll" Private="false" />
+  </ItemGroup>
+
+  <Target Name="ValidateGameReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(MelonLoaderRefs)/MelonLoader.dll')"
+           Text="MelonLoader.dll not found. Set ReferenceRoot to the game's MelonLoader folder, or set PVZF_GAME_DIR to the game folder." />
+    <Error Condition="!Exists('$(Il2CppRefs)/Assembly-CSharp.dll')"
+           Text="Assembly-CSharp.dll not found. Generate/install the game's MelonLoader Il2CppAssemblies first." />
+  </Target>
+</Project>
