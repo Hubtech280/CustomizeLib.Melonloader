@@ -34,9 +34,9 @@ public static class CustomMenuPatch
 	[HarmonyPostfix]
 	public static void PostAwake(CustomMenu __instance)
 	{
-		//IL_00b6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c1: Expected O, but got Unknown
+
+
+
 		if (!GameAPP.canvas.IsObjExist() || GameAPP.canvas.childCount <= 0 || !(GameAPP.canvas.GetChild(0).name == "ChallengeMenu(Clone)") || !GameAPP.canvas.GetChild(0).FindChild("Levels").IsObjExist())
 		{
 			return;

@@ -9,7 +9,7 @@ public static class MethodInvoke
 {
 	public static System.IntPtr GetBaseMethodPtr(System.Type baseType, string methodName, System.Type returnType, params System.Type[] paramTypes)
 	{
-		//IL_004b: Unknown result type (might be due to invalid IL or missing references)
+
 		System.IntPtr nativeClassPointer = Il2CppClassPointerStore.GetNativeClassPointer(baseType);
 		if (nativeClassPointer == System.IntPtr.Zero)
 		{
@@ -26,7 +26,7 @@ public static class MethodInvoke
 
 	public static System.IntPtr GetBaseGenericMethodPtr(System.Type baseType, string methodName, System.Type returnType, params System.Type[] paramTypes)
 	{
-		//IL_004b: Unknown result type (might be due to invalid IL or missing references)
+
 		System.IntPtr nativeClassPointer = Il2CppClassPointerStore.GetNativeClassPointer(baseType);
 		if (nativeClassPointer == System.IntPtr.Zero)
 		{
@@ -43,7 +43,7 @@ public static class MethodInvoke
 
 	public static System.IntPtr GetBaseMethodPtr(System.Type baseType, string methodName, string returnTypeName, params string[] paramTypeNames)
 	{
-		//IL_004b: Unknown result type (might be due to invalid IL or missing references)
+
 		System.IntPtr nativeClassPointer = Il2CppClassPointerStore.GetNativeClassPointer(baseType);
 		if (nativeClassPointer == System.IntPtr.Zero)
 		{
@@ -54,7 +54,7 @@ public static class MethodInvoke
 
 	public static System.IntPtr GetBaseGenericMethodPtr(System.Type baseType, string methodName, string returnTypeName, params string[] paramTypeNames)
 	{
-		//IL_004b: Unknown result type (might be due to invalid IL or missing references)
+
 		System.IntPtr nativeClassPointer = Il2CppClassPointerStore.GetNativeClassPointer(baseType);
 		if (nativeClassPointer == System.IntPtr.Zero)
 		{
@@ -90,12 +90,12 @@ public static class MethodInvoke
 
 	public unsafe static T InvokeBase<T>(System.IntPtr methodPtr, Il2CppObjectBase instance, System.Type returnType, object[] args, bool[] isRefOrOut)
 	{
-		//IL_0463: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0468: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_021c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0221: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
 		void** ptr = null;
 		System.IntPtr[] array = null;
 		GCHandle[] array2 = null;

@@ -10,10 +10,10 @@ public static class ObjectPinner
 
 	public static System.IntPtr PinObjectVal(object value)
 	{
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		if (value == null)
 		{
 			throw new ArgumentNullException("value");
@@ -25,10 +25,10 @@ public static class ObjectPinner
 
 	public static System.IntPtr PinObjectRef(object value)
 	{
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		if (value == null)
 		{
 			throw new ArgumentNullException("value");
@@ -40,10 +40,10 @@ public static class ObjectPinner
 
 	public static void Release()
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0011: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		var enumerator = handles.GetEnumerator();
 		try
 		{
@@ -58,7 +58,7 @@ public static class ObjectPinner
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 		handles.Clear();
 	}

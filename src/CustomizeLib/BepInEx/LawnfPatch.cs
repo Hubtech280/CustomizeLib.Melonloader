@@ -37,12 +37,12 @@ public class LawnfPatch
 	[HarmonyPostfix]
 	public static void Postfix(ref Il2CppSystem.Collections.Generic.List<PlantType> __result)
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0011: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
 		var enumerator = CustomCore.CustomUltimatePlants.GetEnumerator();
 		try
 		{
@@ -57,7 +57,7 @@ public class LawnfPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 
@@ -65,8 +65,8 @@ public class LawnfPatch
 	[HarmonyPrefix]
 	public static bool PreGetName(PlantType thePlantType, ref string __result)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
+
+
 		if (CustomCore.CustomPlantNames.ContainsKey(thePlantType))
 		{
 			__result = CustomCore.CustomPlantNames[thePlantType];
@@ -79,8 +79,8 @@ public class LawnfPatch
 	[HarmonyPrefix]
 	public static bool PreGetName_Zombie(ZombieType theZombieType, ref string __result)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
+
+
 		if (CustomCore.CustomZombieNames.ContainsKey(theZombieType))
 		{
 			__result = CustomCore.CustomZombieNames[theZombieType];
@@ -93,10 +93,10 @@ public class LawnfPatch
 	[HarmonyPostfix]
 	public static void PostTravelAdvanced_0(ref AdvBuff buff, ref bool __result)
 	{
-		//IL_0004: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		ValueTuple<bool, int> val = MultiLevelBuff.IsMultiLevelBuff((BuffType)1, (int)buff);
 		if (!val.Item1)
 		{
@@ -117,10 +117,10 @@ public class LawnfPatch
 	[HarmonyPostfix]
 	public static void PostTravelUltimate_0(ref UltiBuff buff, ref bool __result)
 	{
-		//IL_0004: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		ValueTuple<bool, int> val = MultiLevelBuff.IsMultiLevelBuff((BuffType)2, (int)buff);
 		if (!val.Item1)
 		{
@@ -141,10 +141,10 @@ public class LawnfPatch
 	[HarmonyPostfix]
 	public static void PostTravelUltimateLevel(ref UltiBuff buff, ref int __result)
 	{
-		//IL_0004: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		ValueTuple<bool, int> val = MultiLevelBuff.IsMultiLevelBuff((BuffType)2, (int)buff);
 		if (!val.Item1)
 		{
@@ -165,10 +165,10 @@ public class LawnfPatch
 	[HarmonyPostfix]
 	public static void PostTravelDebuff_1(ref TravelDebuff buff, ref bool __result)
 	{
-		//IL_0004: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		ValueTuple<bool, int> val = MultiLevelBuff.IsMultiLevelBuff((BuffType)3, (int)buff);
 		if (!val.Item1)
 		{

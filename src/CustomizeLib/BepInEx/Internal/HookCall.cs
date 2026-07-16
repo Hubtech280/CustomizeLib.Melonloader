@@ -9,48 +9,48 @@ internal static class HookCall
 
 	internal static void SetBuffArr()
 	{
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0043: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0048: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0053: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ee: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0140: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0161: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0166: Unknown result type (might be due to invalid IL or missing references)
-		//IL_016c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0171: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01cf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0200: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0260: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0267: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0281: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0286: Unknown result type (might be due to invalid IL or missing references)
-		//IL_028c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0291: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0297: Unknown result type (might be due to invalid IL or missing references)
-		//IL_029c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02f3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02fa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0314: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0319: Unknown result type (might be due to invalid IL or missing references)
-		//IL_031f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0324: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0331: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0336: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		Dictionary<AdvBuff, string> dictionary = new Dictionary<AdvBuff, string>();
 		var enumerator = TravelDictionary.advancedBuffsText.GetEnumerator();
 		while (enumerator.MoveNext())
@@ -69,7 +69,7 @@ internal static class HookCall
 		}
 		finally
 		{
-			((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator2).Dispose();
 		}
 		TravelDictionary.advancedBuffsText = dictionary;
 		Dictionary<AdvBuff, PlantType> dictionary2 = new Dictionary<AdvBuff, PlantType>();
@@ -90,7 +90,7 @@ internal static class HookCall
 		}
 		finally
 		{
-			((System.IDisposable)enumerator4/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator4).Dispose();
 		}
 		TravelDictionary.AdvBuffPlantPairs = dictionary2;
 		Dictionary<UltiBuff, string> dictionary3 = new Dictionary<UltiBuff, string>();
@@ -111,7 +111,7 @@ internal static class HookCall
 		}
 		finally
 		{
-			((System.IDisposable)enumerator6/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator6).Dispose();
 		}
 		TravelDictionary.ultimateBuffsText = dictionary3;
 		Dictionary<TravelUnlocks, string> dictionary4 = new Dictionary<TravelUnlocks, string>();
@@ -132,7 +132,7 @@ internal static class HookCall
 		}
 		finally
 		{
-			((System.IDisposable)enumerator8/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator8).Dispose();
 		}
 		TravelDictionary.unlocksText = dictionary4;
 		Dictionary<PlantType, TravelUnlocks> dictionary5 = new Dictionary<PlantType, TravelUnlocks>();
@@ -153,7 +153,7 @@ internal static class HookCall
 		}
 		finally
 		{
-			((System.IDisposable)enumerator10/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator10).Dispose();
 		}
 		TravelDictionary.PlantToUnlock = dictionary5;
 		Dictionary<TravelUnlocks, PlantType> dictionary6 = new Dictionary<TravelUnlocks, PlantType>();
@@ -174,7 +174,7 @@ internal static class HookCall
 		}
 		finally
 		{
-			((System.IDisposable)enumerator12/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator12).Dispose();
 		}
 		TravelDictionary.UnlockToPlant = dictionary6;
 	}

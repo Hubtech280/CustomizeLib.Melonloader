@@ -22,11 +22,11 @@ public static class GeneralExtensions
 
 	public static List<ValueTuple<T1, T2>> ToEnumList<T1, T2>(this List<ValueTuple<int, int>> list) where T1 : System.Enum where T2 : System.Enum
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
 		List<ValueTuple<T1, T2>> val = new List<ValueTuple<T1, T2>>();
 		var enumerator = list.GetEnumerator();
 		try
@@ -41,7 +41,7 @@ public static class GeneralExtensions
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 		return val;
 	}

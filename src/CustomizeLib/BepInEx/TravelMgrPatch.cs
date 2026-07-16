@@ -32,29 +32,29 @@ public static class TravelMgrPatch
 	[HarmonyPostfix]
 	public static void PostGetAdvancedBuffPool(ref Il2CppSystem.Collections.Generic.List<AdvBuff> __result)
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0011: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0028: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0082: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0087: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0090: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0095: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ac: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00dc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f3: Invalid comparison between Unknown and I4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		var enumerator = CustomCore.CustomAdvancedBuffs.GetEnumerator();
 		try
 		{
@@ -73,7 +73,7 @@ public static class TravelMgrPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 		var enumerator2 = CustomCore.CustomPlantInfo.GetEnumerator();
 		try
@@ -108,13 +108,13 @@ public static class TravelMgrPatch
 				}
 				finally
 				{
-					((System.IDisposable)enumerator3/*cast due to constrained. prefix*/).Dispose();
+					((System.IDisposable)enumerator3).Dispose();
 				}
 			}
 		}
 		finally
 		{
-			((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator2).Dispose();
 		}
 	}
 
@@ -122,13 +122,13 @@ public static class TravelMgrPatch
 	[HarmonyPostfix]
 	public static void GetDebuffPool(ref Il2CppSystem.Collections.Generic.List<TravelDebuff> __result)
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0011: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0028: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
 		var enumerator = CustomCore.CustomDebuffs.GetEnumerator();
 		try
 		{
@@ -147,7 +147,7 @@ public static class TravelMgrPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 
@@ -155,14 +155,14 @@ public static class TravelMgrPatch
 	[HarmonyPostfix]
 	public static void PostGetText(Il2CppSystem.Object buff, ref string __result)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0031: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
 		ValueTuple<BuffType, int> typeAndID = TravelExtensions.GetTypeAndID(buff);
 		BuffType item = typeAndID.Item1;
 		int item2 = typeAndID.Item2;

@@ -1,27 +1,27 @@
-# CustomizeLib 3.8 — MelonLoader port
+# CustomizeLib.MelonLoader 3.8
 
 [Version française](README_FR.md)
 
-Unofficial port of `CustomizeLib.BepInEx` for **Plants vs. Zombies Fusion 3.8**, **MelonLoader 0.7.3**, **IL2CPP**, and **.NET 6**.
+Unofficial MelonLoader port of CustomizeLib for **Plants vs. Zombies Fusion 3.8**, **MelonLoader 0.7.3**, **IL2CPP**, and **.NET 6**.
 
 > Original CustomizeLib by **Infinite75**. MelonLoader port maintained by **Hubtech280**.
 
 ## Port status
 
-- MelonLoader detects and loads the library as `PVZCustomization v3.8.0-ml.1`.
+- MelonLoader detects and loads the library as `CustomizeLib.MelonLoader v3.8.0-ml.2`.
 - The project builds against the exact PvZ Fusion 3.8 and MelonLoader 0.7.3 assemblies.
 - A consumer mod based on `CorePlugin` successfully compiles against this port.
 - Static validation confirms that the resulting assembly has no external BepInEx dependency.
 - Full in-game coverage of every CustomizeLib feature is still being tested.
 
-The port preserves the `CustomizeLib.BepInEx` assembly name and namespace to reduce the changes required by existing mods. It does not load any BepInEx DLL.
+The project, MelonLoader entry, logs, and file metadata now use the `CustomizeLib.MelonLoader` name. The output DLL and public namespace deliberately remain `CustomizeLib.BepInEx` as a binary compatibility contract for existing mods. This compatibility name does **not** mean that BepInEx is loaded or required.
 
 ## Installation
 
 1. Install MelonLoader 0.7.3 on PvZ Fusion 3.8.
 2. Launch the game once so that `MelonLoader/Il2CppAssemblies` is generated.
 3. Remove every older BepInEx or MelonLoader copy of CustomizeLib.
-4. Copy `CustomizeLib.BepInEx.dll` into the game's `Mods` directory.
+4. Copy `CustomizeLib.BepInEx.dll` into the game's `Mods` directory. The legacy filename is intentional for mod compatibility.
 5. Place external skins in `Mods/Skin`.
 
 Do not load the BepInEx and MelonLoader versions of CustomizeLib at the same time.
@@ -64,14 +64,14 @@ The game and MelonLoader assemblies are not distributed in this repository.
 Using a complete game installation:
 
 ```powershell
-dotnet build src/CustomizeLib.BepInEx.csproj -c Release `
+dotnet build src/CustomizeLib.MelonLoader.csproj -c Release `
   -p:PVZF_GAME_DIR="C:\Path\To\PlantsVsZombiesRH"
 ```
 
 Alternatively, provide the MelonLoader reference directory directly:
 
 ```powershell
-dotnet build src/CustomizeLib.BepInEx.csproj -c Release `
+dotnet build src/CustomizeLib.MelonLoader.csproj -c Release `
   -p:ReferenceRoot="C:\Path\To\PlantsVsZombiesRH\MelonLoader"
 ```
 
@@ -86,6 +86,9 @@ The output is written to `build/CustomizeLib.BepInEx.dll`.
 - external skin directory moved from `BepInEx/plugins/Skin` to `Mods/Skin`;
 - former `MapValue.BepInEx` patcher dependency replaced with an integrated in-memory table;
 - small source-compatibility layer for the BepInEx `BasePlugin`, logging, and coroutine APIs used by CustomizeLib.
+- custom plant almanacs now refresh their mechanics, flavor text, cost, and correctly spaced titles;
+- invalid skin-projectile registrations now fail safely instead of aborting resource injection;
+- decompiler-only IL diagnostic comments removed from the source tree.
 
 This compatibility layer is not a general BepInEx implementation.
 

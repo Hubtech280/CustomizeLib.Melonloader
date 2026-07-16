@@ -11,10 +11,10 @@ public static class TravelLookMenuPatch
 	[HarmonyPostfix]
 	public static void PostGetAdvBuffs(TravelLookMenu __instance, ref Il2CppSystem.Collections.Generic.List<AdvBuff> __result)
 	{
-		//IL_001d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002c: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		if (CustomCore.CustomAdvancedBuffs.Count <= 0)
 		{
 			return;
@@ -36,7 +36,7 @@ public static class TravelLookMenuPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 
@@ -44,10 +44,10 @@ public static class TravelLookMenuPatch
 	[HarmonyPostfix]
 	public static void PostGetDebuffs(TravelLookMenu __instance, ref Il2CppSystem.Collections.Generic.List<TravelDebuff> __result)
 	{
-		//IL_001d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002c: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		if (CustomCore.CustomDebuffs.Count <= 0)
 		{
 			return;
@@ -69,7 +69,7 @@ public static class TravelLookMenuPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 
@@ -77,10 +77,10 @@ public static class TravelLookMenuPatch
 	[HarmonyPostfix]
 	public static void PostGetUltimateBuffs(TravelLookMenu __instance, ref Il2CppSystem.ValueTuple<Il2CppSystem.Collections.Generic.List<UltiBuff>, Il2CppSystem.Collections.Generic.List<UltiBuff>> __result)
 	{
-		//IL_001d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002c: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		if (CustomCore.CustomUltimateBuffs.Count <= 0)
 		{
 			return;
@@ -106,7 +106,7 @@ public static class TravelLookMenuPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 }

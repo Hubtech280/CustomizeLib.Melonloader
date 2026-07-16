@@ -26,10 +26,10 @@ public static class OptionMenuPatch
 	[HarmonyPostfix]
 	public static void PostOnLockAlmanacMenu()
 	{
-		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003d: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		var enumerator = GameAPP.resourcesManager.allPlants.GetEnumerator();
 		while (enumerator.MoveNext())
 		{

@@ -12,8 +12,8 @@ public static class FertilizePatch
 	[HarmonyPostfix]
 	public static void PostUpgrade(Fertilize __instance)
 	{
-		//IL_00ba: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d2: Unknown result type (might be due to invalid IL or missing references)
+
+
 		if ((Object)(object)__instance == null || (Object)(object)__instance.theTargetPlant == null)
 		{
 			return;

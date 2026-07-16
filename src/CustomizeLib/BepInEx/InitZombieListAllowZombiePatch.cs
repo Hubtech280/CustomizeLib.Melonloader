@@ -11,11 +11,11 @@ public static class InitZombieListAllowZombiePatch
 	[HarmonyPrefix]
 	public static void PrePickZombie()
 	{
-		//IL_001a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0024: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
 		if (!Utils.IsCustomLevel(out var levelData))
 		{
 			return;
@@ -31,7 +31,7 @@ public static class InitZombieListAllowZombiePatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 }

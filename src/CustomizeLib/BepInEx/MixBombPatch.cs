@@ -12,24 +12,24 @@ public static class MixBombPatch
 	[HarmonyPrefix]
 	public static bool Prefix(MixBomb __instance)
 	{
-		//IL_0040: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0045: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0122: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0134: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0139: Unknown result type (might be due to invalid IL or missing references)
-		//IL_018e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0193: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01aa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0267: Unknown result type (might be due to invalid IL or missing references)
-		//IL_026c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_027e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0283: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0214: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0219: Unknown result type (might be due to invalid IL or missing references)
-		//IL_022b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0230: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		bool flag = false;
 		if ((Object)(object)__instance != null)
 		{
@@ -76,13 +76,13 @@ public static class MixBombPatch
 					}
 					finally
 					{
-						((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+						((System.IDisposable)enumerator2).Dispose();
 					}
 				}
 			}
 			finally
 			{
-				((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator).Dispose();
 			}
 		}
 		if ((Object)(object)__instance != null && flag)

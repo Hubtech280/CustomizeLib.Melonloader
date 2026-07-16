@@ -18,7 +18,7 @@ public static class InterfaceCreator
 
 	public static T GetInterfaceInstance<T>() where T : Il2CppObjectBase
 	{
-		//IL_0036: Unknown result type (might be due to invalid IL or missing references)
+
 		ConstructorInfo constructor = typeof(T).GetConstructor((BindingFlags)52, new System.Type[1] { typeof(System.IntPtr) });
 		if (constructor == (ConstructorInfo)null)
 		{

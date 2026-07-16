@@ -30,7 +30,7 @@ public class SelectCustomPlants : MonoBehaviour
 
 	public static void InitButton()
 	{
-		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
+
 		Console.OutputEncoding = Encoding.UTF8;
 		if (!((Object)(object)board == null))
 		{
@@ -47,27 +47,27 @@ public class SelectCustomPlants : MonoBehaviour
 
 	public unsafe void OpenPlantsCard()
 	{
-		//IL_0111: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0039: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07bf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07c4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_080e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0844: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0872: Unknown result type (might be due to invalid IL or missing references)
-		//IL_088c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0896: Unknown result type (might be due to invalid IL or missing references)
-		//IL_089d: Expected I4, but got Unknown
-		//IL_0351: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0356: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03d0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03fa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_046c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0499: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04d2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04dc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04e3: Expected I4, but got Unknown
-		//IL_04eb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0504: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		try
 		{
 			if ((Object)(object)board == null)
@@ -148,7 +148,7 @@ public class SelectCustomPlants : MonoBehaviour
 						component.theSeedType = (int)val;
 						component.theSeedCost = PlantDataManager.PlantData_Default[val].cost;
 						component.fullCD = PlantDataManager.PlantData_Default[val].cd;
-						gameObject4.name = ((object)(*(PlantType*)(&val))/*cast due to constrained. prefix*/).ToString();
+						gameObject4.name = ((object)(*(PlantType*)(&val))).ToString();
 						num5++;
 						num4--;
 						if (num4 == 0)
@@ -208,7 +208,7 @@ public class SelectCustomPlants : MonoBehaviour
 						component3.theSeedType = (int)val2;
 						component3.theSeedCost = 0;
 						component3.fullCD = 0f;
-						gameObject8.name = ((object)(*(PlantType*)(&val2))/*cast due to constrained. prefix*/).ToString();
+						gameObject8.name = ((object)(*(PlantType*)(&val2))).ToString();
 						num12++;
 						num10--;
 						if (num10 == 0)

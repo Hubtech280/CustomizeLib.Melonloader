@@ -88,29 +88,29 @@ public static class InterfaceExtensions
 
 	public static void TakeDamage(this Zombie zombie, int theDamage, Entity damageFrom, DamageType theDamageType, PlantType reportType = (PlantType)(-1), bool fix = false)
 	{
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
+
+
 		((Entity)zombie).TakeDamage(theDamage, damageFrom.ToIDamageMaker(), theDamageType, reportType, fix);
 	}
 
 	public static void TakeDamage(this Zombie zombie, int theDamage, Bullet damageFrom, DamageType theDamageType, PlantType reportType = (PlantType)(-1), bool fix = false)
 	{
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
+
+
 		((Entity)zombie).TakeDamage(theDamage, damageFrom.ToIDamageMaker(), theDamageType, reportType, fix);
 	}
 
 	public static void TakeDamage(this Plant plant, int damage, Entity damageFrom, DamageType damageType = (DamageType)0, PlantType reportType = (PlantType)(-1), bool fix = false)
 	{
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
+
+
 		((Entity)plant).TakeDamage(damage, damageFrom.ToIDamageMaker(), damageType, reportType, fix);
 	}
 
 	public static void TakeDamage(this Plant plant, int damage, Bullet damageFrom, DamageType damageType = (DamageType)0, PlantType reportType = (PlantType)(-1), bool fix = false)
 	{
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
+
+
 		((Entity)plant).TakeDamage(damage, damageFrom.ToIDamageMaker(), damageType, reportType, fix);
 	}
 }

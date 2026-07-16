@@ -11,7 +11,7 @@ public static class UltimateWinterMelonPatch
 	[HarmonyPrefix]
 	public static void PreStart(UltimateWinterMelon __instance)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
+
 		if (SkinMgr.IsPlantSkinEnable(((Plant)__instance).thePlantType))
 		{
 			__instance.stage2 = ((Component)(object)__instance).transform.FindChild("WinterMelon/2").gameObject;

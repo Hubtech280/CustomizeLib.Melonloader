@@ -10,11 +10,11 @@ public static class MoneyPatch
 	[HarmonyPatch("ReinforcePlant")]
 	public static bool PreReinforcePlant(Money __instance, ref Plant plant)
 	{
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ad: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
 		if (CustomCore.SuperSkills.ContainsKey(plant.thePlantType))
 		{
 			int num = CustomCore.SuperSkills[plant.thePlantType].Item1.Invoke(plant);

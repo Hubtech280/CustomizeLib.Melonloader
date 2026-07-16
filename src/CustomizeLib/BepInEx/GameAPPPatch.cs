@@ -29,83 +29,83 @@ public static class GameAPPPatch
 	[HarmonyPrefix]
 	public static void Prefix()
 	{
-		//IL_00d3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0024: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Invalid comparison between Unknown and I4
-		//IL_004b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_015c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0213: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0218: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01da: Unknown result type (might be due to invalid IL or missing references)
-		//IL_018b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_021e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0223: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0226: Unknown result type (might be due to invalid IL or missing references)
-		//IL_022d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0234: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0262: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0267: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0270: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0275: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0284: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02ba: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02c1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0303: Unknown result type (might be due to invalid IL or missing references)
-		//IL_031f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_032c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02a3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0389: Unknown result type (might be due to invalid IL or missing references)
-		//IL_038e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_034e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0355: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0394: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0399: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03a8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03c6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0411: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0416: Unknown result type (might be due to invalid IL or missing references)
-		//IL_041f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0424: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0432: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0434: Unknown result type (might be due to invalid IL or missing references)
-		//IL_043e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0443: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0582: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0587: Unknown result type (might be due to invalid IL or missing references)
-		//IL_044c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0451: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0452: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0457: Unknown result type (might be due to invalid IL or missing references)
-		//IL_047f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_058d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0592: Unknown result type (might be due to invalid IL or missing references)
-		//IL_059c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05ad: Expected I4, but got Unknown
-		//IL_05ba: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05d8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05f7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0626: Unknown result type (might be due to invalid IL or missing references)
-		//IL_062b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04f8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_050a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_051e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0631: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0636: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0538: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0673: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0678: Unknown result type (might be due to invalid IL or missing references)
-		//IL_067e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0683: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		try
 		{
 			if (CustomCore.CustomParticles.Count > 0 && (int)Enumerable.Max<ParticleType>(Enumerable.DefaultIfEmpty<ParticleType>((System.Collections.Generic.IEnumerable<ParticleType>)CustomCore.CustomParticles.Keys)) + 1 >= GameAPP.particlePrefab.Length)
@@ -146,7 +146,7 @@ public static class GameAPPPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 		var enumerator2 = CustomCore.CustomFusions.GetEnumerator();
 		try
@@ -159,7 +159,7 @@ public static class GameAPPPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator2).Dispose();
 		}
 		var enumerator3 = CustomCore.CustomZombies.GetEnumerator();
 		try
@@ -183,7 +183,7 @@ public static class GameAPPPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator3/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator3).Dispose();
 		}
 		var enumerator4 = CustomCore.CustomBullets.GetEnumerator();
 		try
@@ -200,7 +200,7 @@ public static class GameAPPPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator4/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator4).Dispose();
 		}
 		var enumerator5 = CustomCore.CustomSkinBullet.GetEnumerator();
 		try
@@ -212,6 +212,22 @@ public static class GameAPPPatch
 				enumerator5.Current.Deconstruct(out val, out val2);
 				BulletType val3 = val;
 				List<ValueTuple<BulletType, GameObject>> val4 = val2;
+				if (val4 == null)
+				{
+					CustomCore.CLogger?.LogWarning($"[CustomizeLib.MelonLoader] Ignoring an empty skin-projectile list for source bullet {(int)val3}.");
+					continue;
+				}
+				if (!GameAPP.resourcesManager.bulletPrefabs.ContainsKey(val3))
+				{
+					CustomCore.CLogger?.LogWarning($"[CustomizeLib.MelonLoader] Cannot create skin projectiles: source bullet {(int)val3} is not loaded.");
+					continue;
+				}
+				GameObject sourceBullet = GameAPP.resourcesManager.bulletPrefabs[val3];
+				if (sourceBullet == null)
+				{
+					CustomCore.CLogger?.LogWarning($"[CustomizeLib.MelonLoader] Cannot create skin projectiles: source bullet {(int)val3} has no prefab.");
+					continue;
+				}
 				var enumerator6 = val4.GetEnumerator();
 				try
 				{
@@ -224,7 +240,7 @@ public static class GameAPPPatch
 						{
 							continue;
 						}
-						System.Collections.Generic.IEnumerator<Component> enumerator7 = GameAPP.resourcesManager.bulletPrefabs[val3].GetComponents<Component>().GetEnumerator();
+						System.Collections.Generic.IEnumerator<Component> enumerator7 = sourceBullet.GetComponents<Component>().GetEnumerator();
 						try
 						{
 							while (((System.Collections.IEnumerator)enumerator7).MoveNext())
@@ -240,7 +256,12 @@ public static class GameAPPPatch
 						{
 							((System.IDisposable)enumerator7)?.Dispose();
 						}
-						item2.GetComponent<Bullet>().theBulletType = val3;
+						if (!item2.TryGetComponent<Bullet>(out var skinBullet) || skinBullet == null)
+						{
+							CustomCore.CLogger?.LogWarning($"[CustomizeLib.MelonLoader] Ignoring skin projectile {(int)item}: its prefab has no Bullet component.");
+							continue;
+						}
+						skinBullet.theBulletType = val3;
 						GameAPP.resourcesManager.bulletPrefabs[item] = item2;
 						if (!GameAPP.resourcesManager.allBullets.Contains(item))
 						{
@@ -250,13 +271,13 @@ public static class GameAPPPatch
 				}
 				finally
 				{
-					((System.IDisposable)enumerator6/*cast due to constrained. prefix*/).Dispose();
+					((System.IDisposable)enumerator6).Dispose();
 				}
 			}
 		}
 		finally
 		{
-			((System.IDisposable)enumerator5/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator5).Dispose();
 		}
 		var enumerator8 = CustomCore.CustomParticles.GetEnumerator();
 		try
@@ -274,7 +295,7 @@ public static class GameAPPPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator8/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator8).Dispose();
 		}
 		var enumerator9 = CustomCore.CustomSprites.GetEnumerator();
 		try
@@ -287,7 +308,7 @@ public static class GameAPPPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator9/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator9).Dispose();
 		}
 		var enumerator10 = CustomCore.CustomSounds.GetEnumerator();
 		try
@@ -300,7 +321,7 @@ public static class GameAPPPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator10/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator10).Dispose();
 		}
 		((MonoBehaviour)(object)GameAPP.Instance).StartCoroutine(PatchMgr.RegisterSkin());
 	}

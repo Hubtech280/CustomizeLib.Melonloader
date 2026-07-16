@@ -24,16 +24,16 @@ public struct BuffBgType
 
 	public BuffBgType(TravelBuffOptionButton.BgType bgType)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Expected I4, but got Unknown
+
+
 		BgType = 0;
 		BgType = (int)bgType;
 	}
 
 	public BuffBgType(TravelStoreWindow.BgType bgType)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Expected I4, but got Unknown
+
+
 		BgType = 0;
 		BgType = (int)bgType;
 	}
@@ -60,13 +60,13 @@ public struct BuffBgType
 
 	public static implicit operator BuffBgType(TravelBuffOptionButton.BgType bgType)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+
 		return new BuffBgType(bgType);
 	}
 
 	public static implicit operator BuffBgType(TravelStoreWindow.BgType bgType)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+
 		return new BuffBgType(bgType);
 	}
 

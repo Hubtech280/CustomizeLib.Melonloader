@@ -12,7 +12,7 @@ public static class TravelBuffOptionButtonPatch
 	[HarmonyPrefix]
 	public static void PreSetBuff(TravelBuffOptionButton __instance, Il2CppSystem.Object buff)
 	{
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
+
 		__instance.GeneralSet(buff);
 	}
 
@@ -20,23 +20,23 @@ public static class TravelBuffOptionButtonPatch
 	[HarmonyPostfix]
 	public static void PostSetPlant(TravelBuffOptionButton __instance)
 	{
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Invalid comparison between Unknown and I4
-		//IL_0056: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0061: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0066: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0070: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0076: Invalid comparison between Unknown and I4
-		//IL_008f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0094: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		ValueTuple<BuffType, int> val = __instance.TryGetTypeAndID();
 		BuffType item = val.Item1;
 		int buffIndex = val.Item2;
@@ -63,7 +63,7 @@ public static class TravelBuffOptionButtonPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 }

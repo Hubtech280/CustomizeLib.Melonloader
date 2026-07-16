@@ -15,19 +15,19 @@ public static class AlmanacPlantWindowPatch
 	[HarmonyPostfix]
 	public static void PostInitWindow(AlmanacPlantWindow __instance, ref PlantType thePlantType)
 	{
-		//IL_0004: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0035: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0061: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0068: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0076: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ff: Expected I4, but got Unknown
-		//IL_0115: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011f: Expected O, but got Unknown
+
+
+
+
+
+
+
+
+
+
+
+
+
 		PlantType val = thePlantType;
 		if (CustomCore.CustomPlantsSkin.ContainsKey(val))
 		{
@@ -43,7 +43,7 @@ public static class AlmanacPlantWindowPatch
 		{
 			return;
 		}
-		string text = MelonLoader.Utils.MelonEnvironment.ModsDirectory;
+		string text = global::MelonLoader.Utils.MelonEnvironment.ModsDirectory;
 		if (text == null)
 		{
 			return;
@@ -61,8 +61,8 @@ public static class AlmanacPlantWindowPatch
 	[HarmonyPrefix]
 	public static void PreLeftSkin(AlmanacPlantWindow __instance, out bool __state)
 	{
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
+
+
 		__state = __instance.skinButton.active;
 		PatchMgr.OnChangeSkin(__instance.currentPlantType, GameAPP.resourcesManager.plantSkinDic[__instance.currentPlantType]);
 	}
@@ -71,8 +71,8 @@ public static class AlmanacPlantWindowPatch
 	[HarmonyPostfix]
 	public static void PostLeftSkin(AlmanacPlantWindow __instance, bool __state)
 	{
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
+
+
 		__instance.skinButton.SetActive(__state);
 		PatchMgr.OnChangeSkin(__instance.currentPlantType, GameAPP.resourcesManager.plantSkinDic[__instance.currentPlantType]);
 		PatchMgr.SaveSkin();
@@ -82,8 +82,8 @@ public static class AlmanacPlantWindowPatch
 	[HarmonyPrefix]
 	public static void PreRightSkin(AlmanacPlantWindow __instance, out bool __state)
 	{
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
+
+
 		__state = __instance.skinButton.active;
 		PatchMgr.OnChangeSkin(__instance.currentPlantType, GameAPP.resourcesManager.plantSkinDic[__instance.currentPlantType]);
 	}
@@ -92,8 +92,8 @@ public static class AlmanacPlantWindowPatch
 	[HarmonyPostfix]
 	public static void PostRightSkin(AlmanacPlantWindow __instance, bool __state)
 	{
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
+
+
 		__instance.skinButton.SetActive(__state);
 		PatchMgr.OnChangeSkin(__instance.currentPlantType, GameAPP.resourcesManager.plantSkinDic[__instance.currentPlantType]);
 		PatchMgr.SaveSkin();

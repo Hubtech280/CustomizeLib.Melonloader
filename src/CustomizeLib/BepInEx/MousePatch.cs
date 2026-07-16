@@ -15,7 +15,7 @@ public static class MousePatch
 	[HarmonyPatch("GetPlantsOnMouse")]
 	public static void PostGetPlantsOnMouse(ref Il2CppSystem.Collections.Generic.List<Plant> __result)
 	{
-		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
+
 		for (int num = __result.Count - 1; num >= 0; num--)
 		{
 			if ((Object)(object)__result.ToArray()[num] != null && TypeMgr.BigNut(__result.ToArray()[num].thePlantType))
@@ -29,23 +29,23 @@ public static class MousePatch
 	[HarmonyPrefix]
 	public static bool PreMouseClick(Mouse __instance)
 	{
-		//IL_0137: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0190: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0196: Unknown result type (might be due to invalid IL or missing references)
-		//IL_019b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01bd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01c3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01c8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_047b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0488: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0495: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ed: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04a2: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		if (!Input.GetMouseButtonDown(0))
 		{
 			return true;
@@ -119,7 +119,7 @@ public static class MousePatch
 				}
 				finally
 				{
-					((System.IDisposable)enumerator3/*cast due to constrained. prefix*/).Dispose();
+					((System.IDisposable)enumerator3).Dispose();
 				}
 				if (flag3)
 				{
@@ -133,7 +133,7 @@ public static class MousePatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator2).Dispose();
 		}
 		if (flag && flag2)
 		{
@@ -196,10 +196,10 @@ public static class MousePatch
 	[HarmonyPatch("LeftClickWithNothing")]
 	public static void PostLeftClickWithNothing()
 	{
-		//IL_0053: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0058: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008c: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		var enumerator = Enumerable.ToList<GameObject>(Enumerable.Select<RaycastHit2D, GameObject>(Enumerable.Cast<RaycastHit2D>((System.Collections.IEnumerable)(object)(RaycastHit2D[]?)Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero)), (Func<RaycastHit2D, GameObject>)delegate(RaycastHit2D raycastHit2D)
 		{
 			RaycastHit2D raycastHit2D2 = raycastHit2D;
@@ -219,7 +219,7 @@ public static class MousePatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 }

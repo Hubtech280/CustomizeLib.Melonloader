@@ -13,8 +13,8 @@ public static class AlmanacPlantMenuPatch
 	[HarmonyPostfix]
 	public static void PostAwake(AlmanacPlantMenu __instance)
 	{
-		//IL_004c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0052: Expected O, but got Unknown
+
+
 		GameObject gameObject = ((Component)(object)__instance).transform.FindChild("Scroll View/Viewport/Content/LookRedCard").gameObject;
 		GameObject gameObject2 = UnityEngine.Object.Instantiate(gameObject, ((Component)(object)__instance).transform.FindChild("Scroll View/Viewport/Content"));
 		Action val = (Action)delegate

@@ -12,12 +12,12 @@ public static class ZombieDataPatch
 	[HarmonyPostfix]
 	public static void InitZombieData()
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0011: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
 		var enumerator = CustomCore.CustomZombies.GetEnumerator();
 		try
 		{
@@ -29,7 +29,7 @@ public static class ZombieDataPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 }

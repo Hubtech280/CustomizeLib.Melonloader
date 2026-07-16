@@ -14,7 +14,7 @@ public static class CreatePlantPatch
 	[HarmonyPostfix]
 	public static void Postfix_SetPlant(CreatePlant __instance, ref int newColumn, ref int newRow, ref Plant __result)
 	{
-		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
+
 		if ((Object)(object)__result != null && ((Component)(object)__result).TryGetComponent(out Plant component) && CustomCore.CustomPlantTypes.Contains(component.thePlantType))
 		{
 			TypeMgr.GetPlantTag(component);
@@ -25,10 +25,10 @@ public static class CreatePlantPatch
 	[HarmonyPostfix]
 	public static void PostLim(CreatePlant __instance, ref PlantType theSeedType, ref bool __result)
 	{
-		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0033: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0078: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004e: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		if (!CustomCore.CustomBanMix.ContainsKey(theSeedType) || CustomCore.CustomBanMix[theSeedType].Item1 == null)
 		{
 			return;
@@ -55,17 +55,17 @@ public static class CreatePlantPatch
 	[HarmonyPostfix]
 	public static void Postfix_LimTravel(CreatePlant __instance, ref PlantType theSeedType, ref bool __result)
 	{
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0053: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0109: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0182: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0194: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a6: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
 		bool flag = false;
 		if ((Object)(object)TravelMgr.Instance != null && Board.Instance.boardTag.isTravel)
 		{
@@ -111,8 +111,8 @@ public static class CreatePlantPatch
 	[HarmonyPrefix]
 	public static bool Prefix_MixBombCheck(CreatePlant __instance, ref int theBoxColumn, ref int theBoxRow, ref bool __result)
 	{
-		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
+
+
 		List<Plant> val = Enumerable.ToList<Plant>((System.Collections.Generic.IEnumerable<Plant>)Il2Cpp.Lawnf.Get1x1Plants(theBoxColumn, theBoxRow).ToArray());
 		var enumerator = val.GetEnumerator();
 		try
@@ -130,7 +130,7 @@ public static class CreatePlantPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 		return true;
 	}

@@ -20,9 +20,9 @@ public class PositionRecorder : MonoBehaviour
 
 		public RecordPosition(Vector2 position, PlantType plantType)
 		{
-			//IL_000e: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-			//IL_002a: Unknown result type (might be due to invalid IL or missing references)
+
+
+
 			time = 0.05f;
 			this.plantType = (PlantType)(-1);
 			index = -1;
@@ -37,7 +37,7 @@ public class PositionRecorder : MonoBehaviour
 
 	public static void AddPositonToList(Vector2 position, PlantType fromType)
 	{
-		//IL_0004: Unknown result type (might be due to invalid IL or missing references)
+
 		RecordPosition recordPosition = new RecordPosition(position, fromType);
 		recordPosition.index = positions.Count;
 		positions.Add(recordPosition);
@@ -73,8 +73,8 @@ public class PositionRecorder : MonoBehaviour
 
 	public static List<RecordPosition> GetRecordPositions(Vector2 center, float radius)
 	{
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0012: Unknown result type (might be due to invalid IL or missing references)
+
+
 		List<RecordPosition> val = new List<RecordPosition>();
 		var enumerator = positions.GetEnumerator();
 		try
@@ -90,7 +90,7 @@ public class PositionRecorder : MonoBehaviour
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 		return val;
 	}

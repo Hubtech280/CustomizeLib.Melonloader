@@ -13,7 +13,7 @@ public static class UltimateIceDoomPatch
 	[HarmonyPostfix]
 	public static void PostStart(UltimateIceDoom __instance)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
+
 		if (!SkinMgr.IsPlantSkinEnable(((Plant)__instance).thePlantType))
 		{
 			return;

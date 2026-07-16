@@ -10,7 +10,7 @@ public static class PlantExtensions
 {
 	public static void TakeDamage(this Zombie zombie, DmgType theDamageType, int theDamage, PlantType reportType = (PlantType)(-1), bool fix = false)
 	{
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
+
 		((Entity)zombie).TakeDamage(theDamage, CustomDamageMaker.DamageMaker, (DamageType)theDamageType, reportType, fix);
 	}
 

@@ -12,32 +12,32 @@ public struct BuffID
 
 	public BuffID(AdvBuff id)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Expected I4, but got Unknown
+
+
 		this.id = 0;
 		this.id = (int)id;
 	}
 
 	public BuffID(UltiBuff id)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Expected I4, but got Unknown
+
+
 		this.id = 0;
 		this.id = (int)id;
 	}
 
 	public BuffID(TravelDebuff id)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Expected I4, but got Unknown
+
+
 		this.id = 0;
 		this.id = (int)id;
 	}
 
 	public BuffID(TravelUnlocks id)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Expected I4, but got Unknown
+
+
 		this.id = 0;
 		this.id = (int)id;
 	}
@@ -69,25 +69,25 @@ public struct BuffID
 
 	public static implicit operator BuffID(AdvBuff i)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+
 		return new BuffID(i);
 	}
 
 	public static implicit operator BuffID(UltiBuff id)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+
 		return new BuffID(id);
 	}
 
 	public static implicit operator BuffID(TravelDebuff id)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+
 		return new BuffID(id);
 	}
 
 	public static implicit operator BuffID(TravelUnlocks id)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+
 		return new BuffID(id);
 	}
 

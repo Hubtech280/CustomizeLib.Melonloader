@@ -14,7 +14,7 @@ public static class TravelLookBuffPatch
 	[HarmonyPrefix]
 	public static void PreSetBuff(TravelLookBuff __instance, Il2CppSystem.Object buff)
 	{
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
+
 		((TravelBuffOptionButton)(object)__instance).GeneralSet(buff);
 	}
 
@@ -22,31 +22,31 @@ public static class TravelLookBuffPatch
 	[HarmonyPostfix]
 	public static void PostSetBuff(TravelLookBuff __instance)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_024f: Expected O, but got Unknown
-		//IL_025c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0263: Expected O, but got Unknown
-		//IL_0066: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0068: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0080: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0050: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0055: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00df: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_010d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0115: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		ValueTuple<BuffType, int> val = ((TravelBuffOptionButton)(object)__instance).TryGetTypeAndID();
 		BuffType item = val.Item1;
 		int item2 = val.Item2;
@@ -131,21 +131,21 @@ public static class TravelLookBuffPatch
 	[HarmonyPrefix]
 	public static bool PreOnMouseUpAsButton(TravelLookBuff __instance)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d8: Expected O, but got Unknown
-		//IL_01e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ec: Expected O, but got Unknown
-		//IL_0237: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0049: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0051: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006e: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		ValueTuple<BuffType, int> val = ((TravelBuffOptionButton)(object)__instance).TryGetTypeAndID();
 		BuffType item = val.Item1;
 		int item2 = val.Item2;

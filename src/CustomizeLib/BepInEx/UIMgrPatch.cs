@@ -86,7 +86,7 @@ public static class UIMgrPatch
 				}
 				finally
 				{
-					((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+					((System.IDisposable)enumerator2).Dispose();
 				}
 				window.GetComponent<FirstBtns>().pageToOpen = customLevels;
 				((UIBtn)window.GetComponent<FirstBtns>()).originPosition = custom.transform.localPosition;
@@ -100,19 +100,19 @@ public static class UIMgrPatch
 	[HarmonyPrefix]
 	public static bool PreEnterGame(ref LevelType levelType, ref int levelNumber, ref int id, ref string name)
 	{
-		//IL_00b7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ae: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01c1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01c8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01cf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0252: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
 		if ((int)levelType != 66)
 		{
 			return true;
@@ -159,7 +159,7 @@ public static class UIMgrPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 		for (int i = 0; i < val.rowNum; i++)
 		{

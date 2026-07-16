@@ -4,9 +4,9 @@ using System.Text;
 using MelonLoader;
 using UnityEngine;
 
-// Minimal source-compatibility surface for CustomizeLib and mods that inherited
-// its BepInEx-era CorePlugin. These types delegate lifecycle and logging to
-// MelonLoader; no BepInEx assembly is required at runtime.
+// Compatibility-only API for mods compiled against CustomizeLib 3.8.
+// Lifecycle, logging, Harmony and coroutines are all delegated to MelonLoader;
+// no external BepInEx assembly is loaded or required at runtime.
 namespace BepInEx
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
@@ -78,7 +78,7 @@ namespace BepInEx.Logging
 
         internal ManualLogSource(string sourceName, MelonLogger.Instance logger)
         {
-            SourceName = string.IsNullOrWhiteSpace(sourceName) ? "CustomizeLib" : sourceName;
+            SourceName = string.IsNullOrWhiteSpace(sourceName) ? "CustomizeLib.MelonLoader" : sourceName;
             _logger = logger ?? new MelonLogger.Instance(SourceName);
         }
 

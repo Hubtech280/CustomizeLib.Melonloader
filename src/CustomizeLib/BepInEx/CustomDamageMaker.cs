@@ -12,7 +12,7 @@ public class CustomDamageMaker : IDamageMaker
 	public static IDamageMaker DamageMaker => GetDamageMaker();
 
 	[field: CompilerGenerated]
-	public Team Team
+	public override Team Team
 	{
 		[CompilerGenerated]
 		get;
@@ -27,8 +27,8 @@ public class CustomDamageMaker : IDamageMaker
 
 	public override bool CanAttack(IDamageable target)
 	{
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000b: Unknown result type (might be due to invalid IL or missing references)
+
+
 		return target != null && target.Team != Team;
 	}
 

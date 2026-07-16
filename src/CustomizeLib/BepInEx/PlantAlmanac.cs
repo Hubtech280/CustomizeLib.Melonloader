@@ -14,6 +14,6 @@ public struct PlantAlmanac
 
 	public PlantAlmanac()
 	{
-	}//IL_002f: Unknown result type (might be due to invalid IL or missing references)
+	}
 
 }

@@ -28,20 +28,20 @@ public class CustomPlantMonoBehaviour : MonoBehaviour
 
 	public void CustomAnimShoot()
 	{
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0024: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0042: Expected I4, but got Unknown
-		//IL_0042: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0089: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a9: Invalid comparison between Unknown and I4
-		//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ae: Invalid comparison between Unknown and I4
-		//IL_0187: Unknown result type (might be due to invalid IL or missing references)
-		//IL_018a: Invalid comparison between Unknown and I4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		Dictionary<int, int> val = BulletTypes[ThisPlant.thePlantType];
 		List<int> val2 = Enumerable.ToList<int>((System.Collections.Generic.IEnumerable<int>)val.Keys);
 		BulletType val3 = (BulletType)val2[new System.Random().Next(0, val2.Count)];

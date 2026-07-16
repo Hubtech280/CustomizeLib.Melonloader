@@ -186,39 +186,39 @@ public static class PatchMgr
 
 	public static void OnChangeSkin(PlantType almanacType, int index)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0084: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0089: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0092: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0097: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00be: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0035: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0048: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0054: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0055: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0056: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ce: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00dc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00de: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00eb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00fe: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0129: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		BulletType val2 = default(BulletType);
 		List<BulletType> val3 = default(List<BulletType>);
 		if (CustomCore.CustomBulletSkinReplace.ContainsKey(new ValueTuple<PlantType, int>(almanacType, index)))
@@ -237,7 +237,7 @@ public static class PatchMgr
 			}
 			finally
 			{
-				((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator).Dispose();
 			}
 		}
 		var enumerator2 = CustomCore.CustomBulletSkinReplace.GetEnumerator();
@@ -271,42 +271,42 @@ public static class PatchMgr
 				}
 				finally
 				{
-					((System.IDisposable)enumerator3/*cast due to constrained. prefix*/).Dispose();
+					((System.IDisposable)enumerator3).Dispose();
 				}
 			}
 		}
 		finally
 		{
-			((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator2).Dispose();
 		}
 		SetEnableSkin();
 	}
 
 	public static void UpdateSkin()
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0070: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0087: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ac: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		var enumerator = CustomCore.CustomBulletSkinReplace.GetEnumerator();
 		try
 		{
@@ -348,43 +348,43 @@ public static class PatchMgr
 				}
 				finally
 				{
-					((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+					((System.IDisposable)enumerator2).Dispose();
 				}
 			}
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 		SetEnableSkin();
 	}
 
 	public static void SetEnableSkin()
 	{
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0012: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ca: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0054: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0066: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0120: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0112: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0106: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		List<PlantType> val = new List<PlantType>();
 		var enumerator = CustomCore.CustomPlantSkinIndex.GetEnumerator();
 		PlantType val2 = default(PlantType);
@@ -410,13 +410,13 @@ public static class PatchMgr
 				}
 				finally
 				{
-					((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+					((System.IDisposable)enumerator2).Dispose();
 				}
 			}
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 		Dictionary<PlantType, bool> val6 = new Dictionary<PlantType, bool>();
 		var enumerator3 = CustomCore.CustomPlantsSkin.GetEnumerator();
@@ -450,7 +450,7 @@ public static class PatchMgr
 		}
 		finally
 		{
-			((System.IDisposable)enumerator3/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator3).Dispose();
 		}
 		CustomCore.EnableSkin = val6;
 	}
@@ -469,10 +469,10 @@ public static class PatchMgr
 
 	public static Il2CppSystem.Collections.Generic.Dictionary<TKey, TValue>? Clone<TKey, TValue>(this System.Collections.Generic.Dictionary<TKey, TValue> dic1) where TKey : notnull
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		Il2CppSystem.Collections.Generic.Dictionary<TKey, TValue> dictionary = new Il2CppSystem.Collections.Generic.Dictionary<TKey, TValue>();
 		var enumerator = dic1.GetEnumerator();
 		try
@@ -489,7 +489,7 @@ public static class PatchMgr
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 		return dictionary;
 	}
@@ -504,8 +504,8 @@ public static class PatchMgr
 
 	public static void InitWithValue<TKey, TValue>(this Dictionary<TKey, TValue> dic, TValue value) where TKey : notnull
 	{
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0012: Unknown result type (might be due to invalid IL or missing references)
+
+
 		var enumerator = Enumerable.ToList<TKey>((System.Collections.Generic.IEnumerable<TKey>)dic.Keys).GetEnumerator();
 		try
 		{
@@ -517,7 +517,7 @@ public static class PatchMgr
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 
@@ -646,27 +646,27 @@ public static class PatchMgr
 								}
 								finally
 								{
-									((System.IDisposable)enumerator4/*cast due to constrained. prefix*/).Dispose();
+									((System.IDisposable)enumerator4).Dispose();
 								}
 							}
 						}
 						finally
 						{
-							((System.IDisposable)enumerator3/*cast due to constrained. prefix*/).Dispose();
+							((System.IDisposable)enumerator3).Dispose();
 						}
 					}
 				}
 				finally
 				{
-					((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+					((System.IDisposable)enumerator2).Dispose();
 				}
 			}
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
-		string fullName = MelonLoader.Utils.MelonEnvironment.ModsDirectory;
+		string fullName = global::MelonLoader.Utils.MelonEnvironment.ModsDirectory;
 		if (fullName != null)
 		{
 			string skinPath = Path.Combine(fullName, "Skin");
@@ -759,7 +759,7 @@ public static class PatchMgr
 						}
 						finally
 						{
-							((System.IDisposable)enumerator5/*cast due to constrained. prefix*/).Dispose();
+							((System.IDisposable)enumerator5).Dispose();
 						}
 					}
 					catch
@@ -926,7 +926,7 @@ public static class PatchMgr
 					}
 					finally
 					{
-						((System.IDisposable)enumerator9/*cast due to constrained. prefix*/).Dispose();
+						((System.IDisposable)enumerator9).Dispose();
 					}
 					text = null;
 				}
@@ -983,7 +983,7 @@ public static class PatchMgr
 					}
 					finally
 					{
-						((System.IDisposable)enumerator10/*cast due to constrained. prefix*/).Dispose();
+						((System.IDisposable)enumerator10).Dispose();
 					}
 				}
 			}
@@ -1037,64 +1037,64 @@ public static class PatchMgr
 
 	public static void ShowCards()
 	{
-		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0112: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01eb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0138: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fe: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0210: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0212: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0233: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0238: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0529: Unknown result type (might be due to invalid IL or missing references)
-		//IL_052e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0537: Unknown result type (might be due to invalid IL or missing references)
-		//IL_053c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_054a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_054c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_054e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0550: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02fd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0339: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0571: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0576: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03ae: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03f5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03ff: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0406: Expected I4, but got Unknown
-		//IL_040e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0427: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0453: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0494: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0499: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0640: Unknown result type (might be due to invalid IL or missing references)
-		//IL_067c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0723: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0732: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0787: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0791: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0798: Expected I4, but got Unknown
-		//IL_07a0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07b9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07cd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07d7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07de: Expected I4, but got Unknown
-		//IL_07e6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0801: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0814: Unknown result type (might be due to invalid IL or missing references)
-		//IL_081e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0843: Unknown result type (might be due to invalid IL or missing references)
-		//IL_084d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0887: Unknown result type (might be due to invalid IL or missing references)
-		//IL_088c: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		GameObject colorfulCardGameObject = Utils.GetColorfulCardGameObject();
 		List<PlantType> val = new List<PlantType>();
 		Dictionary<PlantType, List<bool>> val2 = new Dictionary<PlantType, List<bool>>();
@@ -1202,13 +1202,13 @@ public static class PatchMgr
 				}
 				finally
 				{
-					((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+					((System.IDisposable)enumerator2).Dispose();
 				}
 			}
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 		GameObject normalCardGameObject = Utils.GetNormalCardGameObject();
 		if (normalCardGameObject == null)
@@ -1289,22 +1289,22 @@ public static class PatchMgr
 				}
 				finally
 				{
-					((System.IDisposable)enumerator4/*cast due to constrained. prefix*/).Dispose();
+					((System.IDisposable)enumerator4).Dispose();
 				}
 			}
 		}
 		finally
 		{
-			((System.IDisposable)enumerator3/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator3).Dispose();
 		}
 	}
 
 	public static void SaveSkin()
 	{
-		//IL_002c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0049: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		Dictionary<PlantType, int> val = new Dictionary<PlantType, int>();
 		var enumerator = GameAPP.resourcesManager.plantSkinDic.GetEnumerator();
 		while (enumerator.MoveNext())

@@ -9,7 +9,7 @@ public static class ObjCopy
 {
 	public static void CopyFieldAndProp(object source, object target, System.Collections.Generic.IEnumerable<System.Type>? skipTypes = null, System.Collections.Generic.IEnumerable<string>? skipStrs = null)
 	{
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
+
 		if (source == null || target == null)
 		{
 			throw new ArgumentNullException("源对象和目标对象均不可为空。");

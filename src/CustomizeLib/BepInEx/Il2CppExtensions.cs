@@ -9,8 +9,8 @@ public static class Il2CppExtensions
 {
 	public static Il2CppSystem.Collections.Generic.List<T> ToIl2CppList<T>(this System.Collections.Generic.List<T> list)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
+
+
 		Il2CppSystem.Collections.Generic.List<T> list2 = new Il2CppSystem.Collections.Generic.List<T>();
 		System.Collections.Generic.List<T>.Enumerator enumerator = list.GetEnumerator();
 		try
@@ -23,7 +23,7 @@ public static class Il2CppExtensions
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 		return list2;
 	}

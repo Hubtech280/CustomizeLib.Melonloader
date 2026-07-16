@@ -99,7 +99,7 @@ public static class Extensions
 
 	public static T GetAsset<T>(this AssetBundle ab, string name) where T : UnityEngine.Object
 	{
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
+
 		System.Collections.Generic.IEnumerator<UnityEngine.Object> enumerator = ab.LoadAllAssetsAsync().allAssets.GetEnumerator();
 		try
 		{

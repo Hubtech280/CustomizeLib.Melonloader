@@ -340,14 +340,14 @@ public struct CustomLevelData
 
 	public CustomLevelData()
 	{
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0120: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0125: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012b: Expected O, but got Unknown
-		//IL_018a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_026e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0278: Expected O, but got Unknown
+
+
+
+
+
+
+
+
 		object obj = _003C_003Ec._003C_003E9__0_6;
 		if (obj == null)
 		{

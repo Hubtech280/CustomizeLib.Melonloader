@@ -43,7 +43,7 @@ public static class Tools
 
 	public static System.Type[] GetAllMonoBehaviourTypes(Assembly assembly)
 	{
-		//IL_0037: Expected O, but got Unknown
+
 		try
 		{
 			System.Type[] types = assembly.GetTypes();

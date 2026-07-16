@@ -11,10 +11,10 @@ public class CustomHealthText : MonoBehaviour
 
 	public void Update()
 	{
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0012: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		var enumerator = registedTexts.GetEnumerator();
 		try
 		{
@@ -30,7 +30,7 @@ public class CustomHealthText : MonoBehaviour
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 }

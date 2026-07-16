@@ -22,7 +22,7 @@ using UnityEngine;
 
 namespace CustomizeLib.BepInEx;
 
-[BepInPlugin("salmon.inf75.pvzcustomization", "PVZCustomization", "3.8")]
+[BepInPlugin("salmon.inf75.pvzcustomization", "CustomizeLib.MelonLoader", "3.8.0-ml.2")]
 public class CustomCore : BasePlugin
 {
 	public static class TypeMgrExtra
@@ -1337,7 +1337,7 @@ public class CustomCore : BasePlugin
 
 	public static void AddPlantAlmanacStrings(int id, string name, string description)
 	{
-		//IL_0077: Unknown result type (might be due to invalid IL or missing references)
+
 		string name2 = name;
 		if (!((Group)Regex.Match(name, "\\(\\d+\\)$")).Success)
 		{
@@ -1355,12 +1355,12 @@ public class CustomCore : BasePlugin
 
 	public static void AddPlantAlmanacStrings(PlantType plantType, string name, string info, string introduce, int cost)
 	{
-		//IL_005c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0041: Expected I4, but got Unknown
+
+
+
+
+
+
 		string name2 = name;
 		if (!((Group)Regex.Match(name, "\\(\\d+\\)$")).Success)
 		{
@@ -1380,7 +1380,7 @@ public class CustomCore : BasePlugin
 
 	public static void AddZombieAlmanacStrings(int id, string name, string description)
 	{
-		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
+
 		string text = name;
 		if (!((Group)Regex.Match(name, "\\(\\d+\\)$")).Success)
 		{
@@ -1393,7 +1393,7 @@ public class CustomCore : BasePlugin
 
 	public static void AddZombieAlmanacStrings(int id, ZombieInfo info)
 	{
-		//IL_006e: Unknown result type (might be due to invalid IL or missing references)
+
 		if (!((Group)Regex.Match(info.name, "\\(\\d+\\)$")).Success)
 		{
 			info.name = $"{info.name}({id})";
@@ -1405,13 +1405,13 @@ public class CustomCore : BasePlugin
 
 	public static AssetBundle GetAssetBundle(Assembly assembly, string name)
 	{
-		//IL_017e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0033: Expected O, but got Unknown
-		//IL_009c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a2: Expected O, but got Unknown
-		//IL_00dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e4: Expected O, but got Unknown
+
+
+
+
+
+
+
 		try
 		{
 			AssetBundle result = default(AssetBundle);
@@ -1473,11 +1473,11 @@ public class CustomCore : BasePlugin
 
 	public static AssetBundle GetAssetBundleFromPath(string path, string name)
 	{
-		//IL_011a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0085: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008c: Expected O, but got Unknown
-		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Expected O, but got Unknown
+
+
+
+
+
 		try
 		{
 			AssetBundle result = default(AssetBundle);
@@ -1527,8 +1527,8 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomSound(AudioClip audio, int soundID)
 	{
-		//IL_0037: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003d: Expected O, but got Unknown
+
+
 		if (!CustomSounds.ContainsKey(soundID))
 		{
 			CustomSounds.Add(soundID, audio);
@@ -1547,77 +1547,77 @@ public class CustomCore : BasePlugin
 
 	public static int RegisterCustomBuff(string text, BuffType buffType, Func<bool> canUnlock, int cost, PlantType plantType = (PlantType)(-1), int level = 1, BuffBgType bg = default(BuffBgType))
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
+
+
 		return RegisterCustomBuff(text, buffType, canUnlock, cost, (PlantType)(-1), addProbability: false, plantType, level, bg);
 	}
 
 	public static int RegisterCustomBuff(string text, BuffType buffType, Func<bool> canUnlock, int cost, PlantType infoType, bool addProbability, PlantType plantType = (PlantType)(-1), int level = 1, BuffBgType bg = default(BuffBgType))
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0004: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
+
+
+
 		return RegisterCustomBuff(text, buffType, canUnlock, cost, plantType, level, bg, (ZombieType)0, -1, infoType, addProbability);
 	}
 
 	public static int RegisterCustomDebuff(string text, Func<bool> unlock = null, ZombieType zombieType = (ZombieType)0, int level = 1, BuffBgType bg = default(BuffBgType))
 	{
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
+
 		return RegisterCustomBuff(text, (BuffType)3, unlock, 0, (PlantType)(-1), level, bg, zombieType, -1, (PlantType)(-1));
 	}
 
 	public static int RegisterCustomBuff(string text, BuffType buffType, Func<bool> canUnlock, int cost, PlantType icon, int level, BuffBgType bgType = default(BuffBgType), ZombieType zombieType = (ZombieType)0, int buffID = -1, PlantType plantType = (PlantType)(-1), bool addProbability = false)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0023: Expected I4, but got Unknown
-		//IL_0145: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0149: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0053: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0071: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00aa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0105: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0168: Unknown result type (might be due to invalid IL or missing references)
-		//IL_016a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0189: Unknown result type (might be due to invalid IL or missing references)
-		//IL_018b: Invalid comparison between Unknown and I4
-		//IL_019b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_019d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0217: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0219: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0207: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0240: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0243: Invalid comparison between Unknown and I4
-		//IL_0231: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0233: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02a5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02a7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02ad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02af: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02b1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0257: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0284: Unknown result type (might be due to invalid IL or missing references)
-		//IL_028c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_028e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0269: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0270: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0272: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		CoreTools.InitBuffDic();
 		int num = -1;
 		switch ((int)buffType)
@@ -1699,30 +1699,30 @@ public class CustomCore : BasePlugin
 
 	public static void SetCustomBuffAlmanacType(BuffType buffType, int id, AlmanacBuffType type, PlantType icon)
 	{
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		CustomAlmanacBuffType.Add(new ValueTuple<BuffType, int>(buffType, id), new ValueTuple<AlmanacBuffType, PlantType, ZombieType>(type, icon, (ZombieType)(-1)));
 	}
 
 	public static void SetCustomBuffAlmanacType(BuffType buffType, int id, AlmanacBuffType type, ZombieType icon)
 	{
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		CustomAlmanacBuffType.Add(new ValueTuple<BuffType, int>(buffType, id), new ValueTuple<AlmanacBuffType, PlantType, ZombieType>(type, (PlantType)(-1), icon));
 	}
 
 	public static void RegisterCustomBullet<TBullet>(BulletType id, GameObject bulletPrefab) where TBullet : Bullet
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0051: Expected O, but got Unknown
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0061: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
 		if (!CustomBullets.ContainsKey(id))
 		{
 			((Bullet)bulletPrefab.AddComponent<TBullet>()).theBulletType = id;
@@ -1742,12 +1742,12 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomBullet<TBase, TBullet>(BulletType id, GameObject bulletPrefab) where TBase : Bullet where TBullet : MonoBehaviour
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0052: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0058: Expected O, but got Unknown
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0068: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
 		if (!CustomBullets.ContainsKey(id))
 		{
 			((Bullet)bulletPrefab.AddComponent<TBase>()).theBulletType = id;
@@ -1775,29 +1775,29 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomParticle(ParticleType id, GameObject particle)
 	{
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
+
 		CustomParticles.Add(id, particle);
 	}
 
 	public static void RegisterCustomPlant<TBase, TClass>([NotNull] int id, [NotNull] GameObject prefab, [NotNull] GameObject preview, List<ValueTuple<int, int>> fusions, float attackInterval, float produceInterval, int attackDamage, int maxHealth, float cd, int sun) where TBase : Plant where TClass : MonoBehaviour
 	{
-		//IL_0112: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0119: Expected O, but got Unknown
-		//IL_0067: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0075: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0086: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0098: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00af: Expected O, but got Unknown
-		//IL_00b9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00be: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d1: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		((Plant)prefab.AddComponent<TBase>()).thePlantType = (PlantType)id;
 		prefab.AddComponent<TClass>();
 		if (!CustomPlantTypes.Contains((PlantType)id))
@@ -1831,7 +1831,7 @@ public class CustomCore : BasePlugin
 			}
 			finally
 			{
-				((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator).Dispose();
 			}
 		}
 		ManualLogSource log = ((BasePlugin)Instance.Value).Log;
@@ -1847,23 +1847,23 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomPlant<TBase>([NotNull] int id, [NotNull] GameObject prefab, [NotNull] GameObject preview, List<ValueTuple<int, int>> fusions, float attackInterval, float produceInterval, int attackDamage, int maxHealth, float cd, int sun) where TBase : Plant
 	{
-		//IL_010b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0112: Expected O, but got Unknown
-		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0076: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0088: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0091: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a8: Expected O, but got Unknown
-		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ca: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		((Plant)prefab.AddComponent<TBase>()).thePlantType = (PlantType)id;
 		if (!CustomPlantTypes.Contains((PlantType)id))
 		{
@@ -1896,7 +1896,7 @@ public class CustomCore : BasePlugin
 			}
 			finally
 			{
-				((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator).Dispose();
 			}
 		}
 		ManualLogSource log = ((BasePlugin)Instance.Value).Log;
@@ -1912,54 +1912,54 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomPlantSkin<TBase, TClass>([NotNull] int id, [NotNull] GameObject prefab, [NotNull] GameObject preview, List<ValueTuple<int, int>> fusions, float attackInterval, float produceInterval, int attackDamage, int maxHealth, float cd, int sun, List<ValueTuple<BulletType, List<GameObject?>>>? bulletSkinList = null) where TBase : Plant where TClass : MonoBehaviour
 	{
-		//IL_0011: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_027d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0282: Unknown result type (might be due to invalid IL or missing references)
-		//IL_028b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0293: Unknown result type (might be due to invalid IL or missing references)
-		//IL_029c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02a5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02ae: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02b7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02c5: Expected O, but got Unknown
-		//IL_01e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ea: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0204: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0216: Unknown result type (might be due to invalid IL or missing references)
-		//IL_021f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_022d: Expected O, but got Unknown
-		//IL_02db: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02e0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0023: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0024: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0033: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02e6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02eb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02ef: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02f6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0059: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0097: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ee: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ef: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d8: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		if (bulletSkinList != null)
 		{
 			var enumerator = bulletSkinList.GetEnumerator();
@@ -2005,13 +2005,13 @@ public class CustomCore : BasePlugin
 					}
 					finally
 					{
-						((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+						((System.IDisposable)enumerator2).Dispose();
 					}
 				}
 			}
 			finally
 			{
-				((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator).Dispose();
 			}
 		}
 		prefab.tag = "Plant";
@@ -2076,60 +2076,60 @@ public class CustomCore : BasePlugin
 		}
 		finally
 		{
-			((System.IDisposable)enumerator3/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator3).Dispose();
 		}
 	}
 
 	public static void RegisterCustomPlantSkin<TBase>([NotNull] int id, [NotNull] GameObject prefab, [NotNull] GameObject preview, List<ValueTuple<int, int>> fusions, float attackInterval, float produceInterval, int attackDamage, int maxHealth, float cd, int sun, List<ValueTuple<BulletType, List<GameObject?>>>? bulletSkinList = null) where TBase : Plant
 	{
-		//IL_0011: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0262: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0267: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0270: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0278: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0281: Unknown result type (might be due to invalid IL or missing references)
-		//IL_028a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0293: Unknown result type (might be due to invalid IL or missing references)
-		//IL_029c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02aa: Expected O, but got Unknown
-		//IL_01ca: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01cf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0204: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0212: Expected O, but got Unknown
-		//IL_02c0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02c5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0023: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0024: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0033: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02cb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02d0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02d4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02db: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0059: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0097: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ee: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ef: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d8: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		if (bulletSkinList != null)
 		{
 			var enumerator = bulletSkinList.GetEnumerator();
@@ -2175,13 +2175,13 @@ public class CustomCore : BasePlugin
 					}
 					finally
 					{
-						((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+						((System.IDisposable)enumerator2).Dispose();
 					}
 				}
 			}
 			finally
 			{
-				((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator).Dispose();
 			}
 		}
 		prefab.tag = "Plant";
@@ -2242,36 +2242,36 @@ public class CustomCore : BasePlugin
 		}
 		finally
 		{
-			((System.IDisposable)enumerator3/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator3).Dispose();
 		}
 	}
 
 	public static void RegisterCustomPlantSkin<TBase>([NotNull] int id, [NotNull] GameObject prefab, [NotNull] GameObject preview, Action<TBase> ctor, List<ValueTuple<BulletType, List<GameObject?>>>? bulletSkinList = null) where TBase : Plant
 	{
-		//IL_0011: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0023: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0024: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0033: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0059: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0097: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ee: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ef: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d8: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		if (bulletSkinList != null)
 		{
 			var enumerator = bulletSkinList.GetEnumerator();
@@ -2317,13 +2317,13 @@ public class CustomCore : BasePlugin
 					}
 					finally
 					{
-						((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+						((System.IDisposable)enumerator2).Dispose();
 					}
 				}
 			}
 			finally
 			{
-				((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator).Dispose();
 			}
 		}
 		prefab.tag = "Plant";
@@ -2360,30 +2360,30 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomPlantSkin<TBase, TClass>([NotNull] int id, [NotNull] GameObject prefab, [NotNull] GameObject preview, Action<TBase> ctor, List<ValueTuple<BulletType, List<GameObject?>>>? bulletSkinList = null) where TBase : Plant where TClass : MonoBehaviour
 	{
-		//IL_0011: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0023: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0024: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0033: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0059: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0097: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ee: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ef: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d8: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		if (bulletSkinList != null)
 		{
 			var enumerator = bulletSkinList.GetEnumerator();
@@ -2429,13 +2429,13 @@ public class CustomCore : BasePlugin
 					}
 					finally
 					{
-						((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+						((System.IDisposable)enumerator2).Dispose();
 					}
 				}
 			}
 			finally
 			{
-				((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator).Dispose();
 			}
 		}
 		prefab.tag = "Plant";
@@ -2473,16 +2473,16 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomSkinBullet(BulletType origin, BulletType bulletType, GameObject bullet)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0036: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0053: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007c: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
 		if (CustomSkinBullet.ContainsKey(origin))
 		{
 			CustomSkinBullet[origin].Add(new ValueTuple<BulletType, GameObject>(bulletType, bullet));
@@ -2509,22 +2509,22 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomUseItemOnPlantEvent([NotNull] PlantType id, [NotNull] BucketType bucketType, [NotNull] Action<Plant> callback)
 	{
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
+
+
+
 		CustomUseItems.Add(new ValueTuple<PlantType, BucketType>(id, bucketType), callback);
 	}
 
 	public static void RegisterCustomUseItemOnPlantEvent([NotNull] PlantType id, [NotNull] BucketType bucketType, [NotNull] PlantType newPlant)
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0012: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
 		CustomUseItems.Add(new ValueTuple<PlantType, BucketType>(id, bucketType), (Action<Plant>)delegate(Plant p)
 		{
-			//IL_001b: Unknown result type (might be due to invalid IL or missing references)
+
 			p.Die((DieReason)0);
 			CreatePlant.Instance.SetPlant(p.thePlantColumn, p.thePlantRow, newPlant, (Plant)null, default(Vector2), false, true, (Plant)null);
 		});
@@ -2532,18 +2532,18 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomUseFertilizeOnPlantEvent([NotNull] PlantType id, [NotNull] Action<Plant> callback)
 	{
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
+
 		CustomUseFertilize.Add(id, callback);
 	}
 
 	public static void RegisterCustomUseFertilizeOnPlantEvent([NotNull] PlantType id, [NotNull] PlantType newPlant)
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0012: Unknown result type (might be due to invalid IL or missing references)
+
+
+
 		CustomUseFertilize.Add(id, (Action<Plant>)delegate(Plant p)
 		{
-			//IL_001b: Unknown result type (might be due to invalid IL or missing references)
+
 			p.Die((DieReason)0);
 			CreatePlant.Instance.SetPlant(p.thePlantColumn, p.thePlantRow, newPlant, (Plant)null, default(Vector2), false, true, (Plant)null);
 		});
@@ -2551,13 +2551,13 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomCard([NotNull] PlantType thePlantType, [NotNull] List<Func<Transform?>> parent, int repeatTime = 1)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0040: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
 		if (!CustomCards.ContainsKey(thePlantType))
 		{
 			CustomCards.Add(thePlantType, new ValueTuple<List<Func<Transform>>, int>(parent, repeatTime));
@@ -2574,17 +2574,17 @@ public class CustomCore : BasePlugin
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 
 	public static void RegisterCustomCard([NotNull] PlantType thePlantType, int repeatTime = 1)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0057: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0058: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0045: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
 		if (!CustomCards.ContainsKey(thePlantType))
 		{
 			Dictionary<PlantType, ValueTuple<List<Func<Transform?>>, int>> customCards = CustomCards;
@@ -2600,7 +2600,7 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomCardToColorfulCards([NotNull] PlantType thePlantType, int repeatTime = 1)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+
 		List<Func<Transform>> obj = new List<Func<Transform>>();
 		obj.Add((Func<Transform>)(() => Utils.GetColorfulCardParent()));
 		RegisterCustomCard(thePlantType, obj, repeatTime);
@@ -2608,13 +2608,13 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomNormalCard([NotNull] PlantType thePlantType, List<Func<Transform?>> parent, int repeatTime = 1)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0040: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
 		if (!CustomNormalCards.ContainsKey(thePlantType))
 		{
 			CustomNormalCards.Add(thePlantType, new ValueTuple<List<Func<Transform>>, int>(parent, repeatTime));
@@ -2631,17 +2631,17 @@ public class CustomCore : BasePlugin
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 
 	public static void RegisterCustomNormalCard([NotNull] PlantType thePlantType, int repeatTime = 1)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0057: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0058: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0045: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
 		if (!CustomNormalCards.ContainsKey(thePlantType))
 		{
 			Dictionary<PlantType, ValueTuple<List<Func<Transform?>>, int>> customNormalCards = CustomNormalCards;
@@ -2657,20 +2657,20 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomZombie<TBase, TClass>(ZombieType id, GameObject zombie, Sprite preview, int theAttackDamage, int theMaxHealth, int theFirstArmorMaxHealth, int theSecondArmorMaxHealth) where TBase : Zombie where TClass : MonoBehaviour
 	{
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0092: Expected O, but got Unknown
-		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0046: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0057: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006e: Expected O, but got Unknown
-		//IL_0069: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a2: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		((Zombie)zombie.AddComponent<TBase>()).theZombieType = id;
 		zombie.AddComponent<TClass>();
 		if (!CustomZombieTypes.Contains(id))
@@ -2698,20 +2698,20 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomZombie<TBase>(ZombieType id, GameObject zombie, Sprite preview, int theAttackDamage, int theMaxHealth, int theFirstArmorMaxHealth, int theSecondArmorMaxHealth) where TBase : Zombie
 	{
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0085: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008b: Expected O, but got Unknown
-		//IL_002b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0037: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0047: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0050: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0059: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0067: Expected O, but got Unknown
-		//IL_0062: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009b: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		((Zombie)zombie.AddComponent<TBase>()).theZombieType = id;
 		if (!CustomZombieTypes.Contains(id))
 		{
@@ -2738,14 +2738,14 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomZombie<TBase, TClass>(ZombieType id, GameObject zombie, Sprite preview, ZombieData data) where TBase : Zombie where TClass : MonoBehaviour
 	{
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006b: Expected O, but got Unknown
-		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0042: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
 		((Zombie)zombie.AddComponent<TBase>()).theZombieType = id;
 		zombie.AddComponent<TClass>();
 		if (!CustomZombieTypes.Contains(id))
@@ -2767,14 +2767,14 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomZombie<TBase>(ZombieType id, GameObject zombie, Sprite preview, ZombieData data) where TBase : Zombie
 	{
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0064: Expected O, but got Unknown
-		//IL_002b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0037: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
 		((Zombie)zombie.AddComponent<TBase>()).theZombieType = id;
 		if (!CustomZombieTypes.Contains(id))
 		{
@@ -2795,29 +2795,29 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterSuperSkill([NotNull] int id, [NotNull] Func<Plant, int> cost, [NotNull] Action<Plant> skill, [NotNull] int defaultCost = 1000)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
+
 		SuperSkills.Add((PlantType)id, new ValueTuple<Func<Plant, int>, Action<Plant>, int>(cost, skill, defaultCost));
 	}
 
 	public static void AddUltimatePlant([NotNull] PlantType plantType)
 	{
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
+
 		CustomUltimatePlants.Add(plantType);
 	}
 
 	public static void RegisterCustomStrongUltimatePlant([NotNull] PlantType plantType, [NotNull] int id)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0054: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0039: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0066: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0094: Expected O, but got Unknown
-		//IL_0078: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
 		if (!TravelDictionary.allStrongUltimtePlant.Contains(plantType))
 		{
 			TravelDictionary.allStrongUltimtePlant.Add(plantType);
@@ -2848,29 +2848,29 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomMixBombFusion([NotNull] PlantType left, [NotNull] PlantType center, [NotNull] PlantType right, [NotNull] List<Action<Plant, Plant, Plant>> actions, [NotNull] List<Action<Plant, Plant, Plant>> failActions)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ba: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0033: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0034: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0035: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0068: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0080: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0081: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0086: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		if (CustomMixBombFusions.ContainsKey(new ValueTuple<PlantType, PlantType, PlantType>(left, center, right)))
 		{
 			var enumerator = actions.GetEnumerator();
@@ -2884,7 +2884,7 @@ public class CustomCore : BasePlugin
 			}
 			finally
 			{
-				((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator).Dispose();
 			}
 			var enumerator2 = failActions.GetEnumerator();
 			try
@@ -2898,7 +2898,7 @@ public class CustomCore : BasePlugin
 			}
 			finally
 			{
-				((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator2).Dispose();
 			}
 		}
 		CustomMixBombFusions.Add(new ValueTuple<PlantType, PlantType, PlantType>(left, center, right), new ValueTuple<List<Action<Plant, Plant, Plant>>, List<Action<Plant, Plant, Plant>>>(actions, failActions));
@@ -2906,26 +2906,26 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomMixBombFusion([NotNull] PlantType left, [NotNull] PlantType center, [NotNull] PlantType right, [NotNull] Action<Plant, Plant, Plant> action, [NotNull] Action<Plant, Plant, Plant> failAction)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0067: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0096: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0020: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0043: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		if (CustomMixBombFusions.ContainsKey(new ValueTuple<PlantType, PlantType, PlantType>(left, center, right)))
 		{
 			CustomMixBombFusions[new ValueTuple<PlantType, PlantType, PlantType>(left, center, right)].Item1.Add(action);
@@ -2946,9 +2946,9 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomMixBombFusion([NotNull] PlantType left, [NotNull] PlantType center, [NotNull] PlantType right, [NotNull] Action<Plant, Plant, Plant> action, [NotNull] string failMessage = "")
 	{
-		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0010: Unknown result type (might be due to invalid IL or missing references)
+
+
+
 		RegisterCustomMixBombFusion(left, center, right, action, delegate
 		{
 			if (failMessage != "" && InGameText.Instance != null)
@@ -2960,14 +2960,14 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomMixBombFusion([NotNull] PlantType left, [NotNull] PlantType center, [NotNull] PlantType right, [NotNull] PlantType target, [NotNull] string failMessage = "")
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
 		RegisterCustomMixBombFusion(left, center, right, (Action<Plant, Plant, Plant>)delegate(Plant p1, Plant p2, Plant p3)
 		{
-			//IL_0017: Unknown result type (might be due to invalid IL or missing references)
+
 			Il2Cpp.Lawnf.SetDroppedCard((Vector2)((Entity)p2).axis.transform.position, target, 0);
 			p1.Die((DieReason)0);
 			p2.Die((DieReason)0);
@@ -2984,14 +2984,14 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomMixBombFusion([NotNull] PlantType left, [NotNull] PlantType center, [NotNull] PlantType right, [NotNull] PlantType target, [NotNull] Action<Plant, Plant, Plant> failAction)
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
 		RegisterCustomMixBombFusion(left, center, right, (Action<Plant, Plant, Plant>)delegate(Plant p1, Plant p2, Plant p3)
 		{
-			//IL_0017: Unknown result type (might be due to invalid IL or missing references)
+
 			Il2Cpp.Lawnf.SetDroppedCard((Vector2)((Entity)p2).axis.transform.position, target, 0);
 			p1.Die((DieReason)0);
 			p2.Die((DieReason)0);
@@ -3001,19 +3001,19 @@ public class CustomCore : BasePlugin
 
 	public static void AddFusion(int target, int item1, int item2)
 	{
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
+
 		CustomFusions.Add(new ValueTuple<int, int, int>(target, item1, item2));
 	}
 
 	public static void AddFusion(PlantType target, PlantType item1, PlantType item2)
 	{
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Expected I4, but got Unknown
-		//IL_000d: Expected I4, but got Unknown
-		//IL_000d: Expected I4, but got Unknown
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
 		CustomFusions.Add(new ValueTuple<int, int, int>((int)target, (int)item1, (int)item2));
 	}
 
@@ -3024,18 +3024,18 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomCherry(CherryBombType id, [NotNull] GameObject prefab)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
+
+
+
 		RegisterCustomParticle((ParticleType)(CustomCherryStartID + id), prefab);
 		CustomCherrys.Add(id, prefab);
 	}
 
 	public static void RegisterCustomCherry<T>(CherryBombType id, [NotNull] GameObject prefab) where T : MonoBehaviour
 	{
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0020: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002d: Unknown result type (might be due to invalid IL or missing references)
+
+
+
 		if (!ClassInjector.IsTypeRegisteredInIl2Cpp<T>())
 		{
 			ClassInjector.RegisterTypeInIl2Cpp<T>();
@@ -3047,17 +3047,17 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomClickCardOnPlantEvent([NotNull] PlantType plantType, [NotNull] PlantType cardType, [NotNull] Action<Plant> action, Func<Plant, bool> canClick = null, [NotNull] CustomClickCardOnPlant onPlant = default(CustomClickCardOnPlant))
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002b: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
 		if (CustomClickCardOnPlantEvents.ContainsKey(new ValueTuple<PlantType, PlantType>(plantType, cardType)))
 		{
 			CustomClickCardOnPlantEvents[new ValueTuple<PlantType, PlantType>(plantType, cardType)].Add(new ValueTuple<Action<Plant>, Func<Plant, bool>, CustomClickCardOnPlant>(action, canClick, onPlant));
@@ -3072,12 +3072,12 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomBanMix([NotNull] PlantType plantType, Func<bool>? func = null, Action? success = null, Action? fail = null)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0034: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Expected O, but got Unknown
-		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004a: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
 		if (!CustomBanMix.ContainsKey(plantType))
 		{
 			CustomBanMix.Add(plantType, new ValueTuple<Func<bool>, Action, Action>(func, success, fail));
@@ -3096,17 +3096,17 @@ public class CustomCore : BasePlugin
 
 	public static void RegisterCustomOnMixEvent(PlantType baseType, PlantType newType, List<Action<Plant>> actions)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0035: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0020: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0045: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0046: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0047: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
 		if (!CustomOnMixEvent.ContainsKey(new ValueTuple<PlantType, PlantType>(baseType, newType)))
 		{
 			CustomOnMixEvent.Add(new ValueTuple<PlantType, PlantType>(baseType, newType), actions);
@@ -3123,14 +3123,14 @@ public class CustomCore : BasePlugin
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 
 	public static void RegisterCustomOnMixEvent(PlantType baseType, PlantType newType, Action<Plant> action)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
+
+
 		List<Action<Plant>> obj = new List<Action<Plant>>();
 		obj.Add(action);
 		RegisterCustomOnMixEvent(baseType, newType, obj);
@@ -3138,13 +3138,13 @@ public class CustomCore : BasePlugin
 
 	public static void AddPlantName(PlantType plantType, string name)
 	{
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
+
 		CustomPlantNames.Add(plantType, name);
 	}
 
 	public static void AddZombieName(ZombieType zombieType, string name)
 	{
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
+
 		CustomZombieNames.Add(zombieType, name);
 	}
 

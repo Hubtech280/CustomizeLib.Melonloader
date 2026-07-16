@@ -12,40 +12,40 @@ public struct ID
 
 	public ID(PlantType id)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Expected I4, but got Unknown
+
+
 		this.id = 0;
 		this.id = (int)id;
 	}
 
 	public ID(ZombieType id)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Expected I4, but got Unknown
+
+
 		this.id = 0;
 		this.id = (int)id;
 	}
 
 	public ID(ParticleType id)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Expected I4, but got Unknown
+
+
 		this.id = 0;
 		this.id = (int)id;
 	}
 
 	public ID(BulletType id)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Expected I4, but got Unknown
+
+
 		this.id = 0;
 		this.id = (int)id;
 	}
 
 	public ID(CherryBombType id)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Expected I4, but got Unknown
+
+
 		this.id = 0;
 		this.id = (int)id;
 	}
@@ -87,35 +87,35 @@ public struct ID
 
 	public static implicit operator ID(PlantType id)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+
 		return new ID(id);
 	}
 
 	public static implicit operator ID(ZombieType id)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+
 		return new ID(id);
 	}
 
 	public static implicit operator ID(ParticleType id)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+
 		return new ID(id);
 	}
 
 	public static implicit operator ID(BulletType id)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+
 		return new ID(id);
 	}
 
 	public static implicit operator ID(CherryBombType id)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+
 		return new ID(id);
 	}
 
-	public string ToString()
+	public override string ToString()
 	{
 		return id.ToString();
 	}

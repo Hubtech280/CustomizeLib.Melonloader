@@ -11,8 +11,8 @@ public static class BoardActionPatch
 	[HarmonyPrefix]
 	public static bool PreCreateCherryExplode(Board __instance, ref Vector2 v, ref int theRow, ref CherryBombType bombType, ref int damage, ref PlantType fromType, ref Action<Zombie> action, ref bool immediately, ref BombCherry __result)
 	{
-		//IL_005a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0060: Expected O, but got Unknown
+
+
 		if (CustomCore.CustomCherrys.ContainsKey(bombType) && (UnityEngine.Object)(object)__instance != null)
 		{
 			CreateParticle.SetParticle(CustomCore.CustomCherryStartID + (int)bombType, (Vector3)v, 11, true);

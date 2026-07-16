@@ -8,10 +8,10 @@ public static class Utils
 
 	public static bool InGame()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0008: Invalid comparison between Unknown and I4
+
+
+
+
 		GameStatus theGameStatus = GameAPP.theGameStatus;
 		if ((int)theGameStatus <= 1)
 		{
@@ -22,8 +22,8 @@ public static class Utils
 
 	public static bool IsCustomLevel(out CustomLevelData levelData)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
+
+
 		if (GameAPP.theBoardType == CustomLevelType)
 		{
 			levelData = CustomCore.CustomLevels[GameAPP.theBoardLevel];
@@ -35,8 +35,8 @@ public static class Utils
 
 	public static bool IsGameRunning()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Invalid comparison between Unknown and I4
+
+
 		return (int)GameAPP.theGameStatus == 0;
 	}
 
@@ -52,8 +52,8 @@ public static class Utils
 
 	public static GameObject? GetColorfulCardGameObject()
 	{
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005e: Unknown result type (might be due to invalid IL or missing references)
+
+
 		if (Board.Instance != null && !Board.Instance.boardTag.isIZ)
 		{
 			GameObject gameObject = null;
@@ -69,8 +69,8 @@ public static class Utils
 
 	public static GameObject? GetNormalCardGameObject()
 	{
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005e: Unknown result type (might be due to invalid IL or missing references)
+
+
 		if (Board.Instance != null && !Board.Instance.boardTag.isIZ)
 		{
 			GameObject gameObject = null;
@@ -86,8 +86,8 @@ public static class Utils
 
 	public static Transform? GetColorfulCardParent()
 	{
-		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005b: Unknown result type (might be due to invalid IL or missing references)
+
+
 		if ((Object)(object)Board.Instance != null && !Board.Instance.boardTag.isIZ)
 		{
 			return InGameUI.Instance.SeedBank.transform.parent.FindChild("Bottom/SeedLibrary/Grid/CardPagesContainer/ColorCards/SampleGrid(Clone)");
@@ -101,9 +101,9 @@ public static class Utils
 
 	public static Transform? GetNormalCardParent()
 	{
-		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a3: Unknown result type (might be due to invalid IL or missing references)
+
+
+
 		if ((Object)(object)Board.Instance != null && Board.Instance.boardTag.isTowerDefence)
 		{
 			return InGameUI.Instance.SeedBank.transform.parent.FindChild("Bottom/SeedLibrary/Grid/CardPagesContainer/TowerCards/Page1");
@@ -126,10 +126,10 @@ public static class Utils
 
 	public static bool EnableTravelPlant()
 	{
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		return Board.Instance.boardTag.enableAllTravelPlant || Board.Instance.boardTag.isSuperRandom || Board.Instance.boardTag.isUltimateSuperRandom || IsCheat() || Board.Instance.boardTag.isTravel;
 	}
 }

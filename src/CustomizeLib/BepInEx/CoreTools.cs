@@ -123,10 +123,10 @@ public static class CoreTools
 
 	public static AdvBuff GetAdvBuffByString(string name)
 	{
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		if (AdvBuffPair.ContainsKey(name))
 		{
 			return AdvBuffPair[name];
@@ -136,10 +136,10 @@ public static class CoreTools
 
 	public static UltiBuff GetUltiBuffByString(string name)
 	{
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		if (UltiBuffPair.ContainsKey(name))
 		{
 			return UltiBuffPair[name];
@@ -149,10 +149,10 @@ public static class CoreTools
 
 	public static TravelDebuff GetTravelDebuffByString(string name)
 	{
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		if (DebuffBuffPair.ContainsKey(name))
 		{
 			return DebuffBuffPair[name];
@@ -162,8 +162,8 @@ public static class CoreTools
 
 	public static TravelUnlocks GetTravelUnlocksByString(string name)
 	{
-		//IL_03ef: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03f3: Unknown result type (might be due to invalid IL or missing references)
+
+
 		int num = -1;
 		switch (global::_003CPrivateImplementationDetails_003E.ComputeStringHash(name))
 		{
@@ -317,25 +317,25 @@ public static class CoreTools
 
 	public static bool TravelAdvanced(string name)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
+
 		return Lawnf.TravelAdvanced(GetAdvBuffByString(name));
 	}
 
 	public static bool TravelUltimate(string name)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
+
 		return Lawnf.TravelUltimate(GetUltiBuffByString(name));
 	}
 
 	public static int TravelUltimateLevel(string name)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
+
 		return Lawnf.TravelUltimateLevel(GetUltiBuffByString(name));
 	}
 
 	public static bool TravelDebuff(string name)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
+
 		return Lawnf.TravelDebuff(GetTravelDebuffByString(name));
 	}
 
@@ -351,13 +351,13 @@ public static class CoreTools
 
 	public static GameObject CreateCherryExplodeCustom(Vector2 v, int theRow, CherryBombType bombType = (CherryBombType)0, int damage = 1800, PlantType fromType = (PlantType)(-1), Action<Zombie> action = null, bool immediately = true, bool shake = true)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Expected I4, but got Unknown
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0040: Expected O, but got Unknown
-		//IL_005d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0076: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
 		GameObject result = CreateParticle.SetParticle(CustomCore.CustomCherryStartID + (int)bombType, (Vector3)v, 11, true);
 		if (shake)
 		{
@@ -382,27 +382,27 @@ public static class CoreTools
 
 	public static ValueTuple<BombCherry, GameObject> CreateCherryExplode(Vector2 v, int theRow, CherryBombType bombType = (CherryBombType)0, int damage = 1800, PlantType fromType = (PlantType)(-1), Action<Zombie> action = null, bool immediately = true, bool shake = true, int soundID = 40, float volume = 0.5f, float pitch = 1f)
 	{
-		//IL_0033: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0069: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006b: Invalid comparison between Unknown and I4
-		//IL_0045: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0046: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0055: Expected I4, but got Unknown
-		//IL_017e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008e: Invalid comparison between Unknown and I4
-		//IL_0090: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0092: Invalid comparison between Unknown and I4
-		//IL_0112: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0118: Expected O, but got Unknown
-		//IL_0135: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0176: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b9: Invalid comparison between Unknown and I4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		if ((UnityEngine.Object)(object)Board.Instance == null || ((UnityEngine.Object)(object)Board.Instance).IsDestroyed())
 		{
 			return new ValueTuple<BombCherry, GameObject>((BombCherry)null, (GameObject)null);

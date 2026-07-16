@@ -12,10 +12,10 @@ public static class PlantPatch
 	[HarmonyPatch("UseItem")]
 	public static void PostUseItem(Plant __instance, ref BucketType type, ref Bucket bucket)
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0023: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
 		if (CustomCore.CustomUseItems.ContainsKey(new ValueTuple<PlantType, BucketType>(__instance.thePlantType, type)))
 		{
 			CustomCore.CustomUseItems[new ValueTuple<PlantType, BucketType>(__instance.thePlantType, type)].Invoke(__instance);
@@ -27,14 +27,14 @@ public static class PlantPatch
 	[HarmonyPostfix]
 	public static void PostStart(Plant __instance)
 	{
-		//IL_0010: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0034: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0049: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004e: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
 		if (!((Object)(object)__instance != null) || !CustomCore.CustomOnMixEvent.ContainsKey(new ValueTuple<PlantType, PlantType>(__instance.firstParent, __instance.secondParent)))
 		{
 			return;
@@ -50,7 +50,7 @@ public static class PlantPatch
 		}
 		finally
 		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			((System.IDisposable)enumerator).Dispose();
 		}
 	}
 }

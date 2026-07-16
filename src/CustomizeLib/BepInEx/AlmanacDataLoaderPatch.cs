@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Il2CppAlmanacData;
@@ -13,90 +12,64 @@ public static class AlmanacDataLoaderPatch
 	[HarmonyPostfix]
 	public static void PostLoadZombieData()
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0039: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0073: Expected O, but got Unknown
-		//IL_0075: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0054: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005b: Unknown result type (might be due to invalid IL or missing references)
-		var enumerator = CustomCore.ZombiesAlmanac.GetEnumerator();
-		try
+		foreach (KeyValuePair<ZombieType, (string, string, ZombieInfo)> entry in CustomCore.ZombiesAlmanac)
 		{
-			while (enumerator.MoveNext())
+			if (AlmanacDataLoader.zombieDatas.ContainsKey(entry.Key))
 			{
-				KeyValuePair<ZombieType, ValueTuple<string, string, ZombieInfo>> current = enumerator.Current;
-				if (!AlmanacDataLoader.zombieDatas.ContainsKey(current.Key))
-				{
-					if (current.Value.Item3 != null)
-					{
-						AlmanacDataLoader.zombieDatas.Add(current.Key, current.Value.Item3);
-						continue;
-					}
-					ZombieInfo val = new ZombieInfo();
-					string name = Regex.Replace(current.Value.Item1, "\\([^()]*\\)", "");
-					val.name = name;
-					val.info = current.Value.Item2;
-					val.introduce = "";
-					val.theZombieType = current.Key;
-					AlmanacDataLoader.zombieDatas.Add(current.Key, val);
-				}
+				continue;
 			}
-		}
-		finally
-		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+
+			if (entry.Value.Item3 != null)
+			{
+				AlmanacDataLoader.zombieDatas.Add(entry.Key, entry.Value.Item3);
+				continue;
+			}
+
+			ZombieInfo zombieInfo = new ZombieInfo
+			{
+				name = Regex.Replace(entry.Value.Item1 ?? string.Empty, "\\([^()]*\\)", string.Empty),
+				info = entry.Value.Item2 ?? string.Empty,
+				introduce = string.Empty,
+				theZombieType = entry.Key
+			};
+			AlmanacDataLoader.zombieDatas.Add(entry.Key, zombieInfo);
 		}
 	}
 
 	[HarmonyPatch("LoadPlantData")]
 	[HarmonyPostfix]
+	[HarmonyPriority(Priority.Last)]
 	public static void PostLoadPlantData()
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0028: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0040: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0047: Expected O, but got Unknown
-		//IL_0079: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0083: Expected I4, but got Unknown
-		//IL_0097: Unknown result type (might be due to invalid IL or missing references)
-		var enumerator = CustomCore.PlantsAlmanac.GetEnumerator();
-		try
+		foreach (KeyValuePair<PlantType, PlantAlmanac> entry in CustomCore.PlantsAlmanac)
 		{
-			PlantType val = default(PlantType);
-			PlantAlmanac plantAlmanac = default(PlantAlmanac);
-			while (enumerator.MoveNext())
+			PlantType plantType = entry.Key;
+			PlantAlmanac source = entry.Value;
+			bool alreadyLoaded = AlmanacDataLoader.plantDatas.ContainsKey(plantType);
+			PlantInfo target = alreadyLoaded ? AlmanacDataLoader.plantDatas[plantType] : null;
+			target ??= new PlantInfo();
+
+			string cleanName = Regex.Replace(
+				source.name ?? string.Empty,
+				"[\\(（][^()（）]*[\\)）]",
+				string.Empty
+			).TrimEnd();
+
+			// The native title appends "(ID)" directly, so keep one separator.
+			target.name = cleanName.Length > 0 ? cleanName + " " : string.Empty;
+			target.info = source.info ?? string.Empty;
+			target.introduce = source.introduce ?? string.Empty;
+			target.seedType = (int)source.plantType;
+			target.cost = source.cost ?? string.Empty;
+
+			if (alreadyLoaded)
 			{
-				enumerator.Current.Deconstruct(out val, out plantAlmanac);
-				PlantType key = val;
-				PlantAlmanac plantAlmanac2 = plantAlmanac;
-				if (!AlmanacDataLoader.plantDatas.ContainsKey(key))
-				{
-					PlantInfo val2 = new PlantInfo();
-					string name = Regex.Replace(plantAlmanac2.name, "\\([^()]*\\)", "");
-					val2.name = name;
-					val2.info = plantAlmanac2.info;
-					val2.seedType = (int)plantAlmanac2.plantType;
-					val2.cost = plantAlmanac2.cost;
-					AlmanacDataLoader.plantDatas.Add(key, val2);
-				}
+				AlmanacDataLoader.plantDatas[plantType] = target;
 			}
-		}
-		finally
-		{
-			((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+			else
+			{
+				AlmanacDataLoader.plantDatas.Add(plantType, target);
+			}
 		}
 	}
 }

@@ -13,8 +13,8 @@ public class CorePlugin : BasePlugin
 
 	public override void Load()
 	{
-		//IL_0033: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003d: Expected O, but got Unknown
+
+
 		Logger = ((BasePlugin)this).Log;
 		Tools.InitMod(((object)this).GetType().Assembly);
 		OnStart();

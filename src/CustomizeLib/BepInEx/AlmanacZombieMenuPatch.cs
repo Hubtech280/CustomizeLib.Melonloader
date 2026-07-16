@@ -15,8 +15,8 @@ public class AlmanacZombieMenuPatch
 	[HarmonyPostfix]
 	public static void Postfix(AlmanacZombieMenu __instance)
 	{
-		//IL_010b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0112: Expected O, but got Unknown
+
+
 		if (!(((Component)(object)__instance).transform.Find("LoolAll_Other") == null))
 		{
 			return;

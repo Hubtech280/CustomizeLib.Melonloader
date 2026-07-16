@@ -11,8 +11,8 @@ public class StringFormatter
 
 	public static string Format(string input)
 	{
-		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003e: Expected O, but got Unknown
+
+
 		if (string.IsNullOrEmpty(input))
 		{
 			return input;

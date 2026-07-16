@@ -12,24 +12,24 @@ public static class NoticeMenuPatch
 	[HarmonyPostfix]
 	public static void Postfix()
 	{
-		//IL_006b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0070: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0076: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0089: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0091: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0094: Invalid comparison between Unknown and I4
-		//IL_009e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0122: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0128: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0131: Unknown result type (might be due to invalid IL or missing references)
-		//IL_016b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0170: Unknown result type (might be due to invalid IL or missing references)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		try
 		{
 			if (PatchMgr.Load)
@@ -62,7 +62,7 @@ public static class NoticeMenuPatch
 			}
 			finally
 			{
-				((System.IDisposable)enumerator/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator).Dispose();
 			}
 			property.SetValue((object)null, (object)hashSet);
 			PropertyInfo property2 = typeof(TypeMgr).GetProperty("UncrashablePlants", (BindingFlags)24);
@@ -87,7 +87,7 @@ public static class NoticeMenuPatch
 			}
 			finally
 			{
-				((System.IDisposable)enumerator2/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator2).Dispose();
 			}
 			property2.SetValue((object)null, (object)hashSet2);
 			PatchMgr.Load = true;
@@ -102,7 +102,7 @@ public static class NoticeMenuPatch
 			}
 			finally
 			{
-				((System.IDisposable)enumerator3/*cast due to constrained. prefix*/).Dispose();
+				((System.IDisposable)enumerator3).Dispose();
 			}
 		}
 		finally
