@@ -2,6 +2,13 @@
 
 [English version](CHANGELOG.md)
 
+## 3.8.1-ml.1
+
+- Mise à jour de la cible de compilation et des références IL2CPP générées vers PvZ Fusion 3.8.1.
+- Renommage de l'assembly généré et du namespace public de `CustomizeLib.BepInEx` vers `CustomizeLib.MelonLoader`.
+- Suppression de l'ancien fichier projet portant le nom BepInEx.
+- Validation d'une compilation Release propre avec PvZ Fusion 3.8.1 et MelonLoader 0.7.3.
+
 ## 3.8.0-ml.2
 
 - Renommage du projet, du point d'entrée MelonLoader, des logs et des métadonnées en `CustomizeLib.MelonLoader`.

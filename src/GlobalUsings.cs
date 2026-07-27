@@ -1,6 +1,6 @@
 // MelonLoader's Il2CppInterop generator moves game types from the global
 // namespace into Il2Cpp. A global import keeps CustomizeLib's public source API
-// readable while binding every game type to the generated 3.8 wrappers.
+// readable while binding every game type to the generated 3.8.1 wrappers.
 global using Il2Cpp;
 global using PlantData = Il2Cpp.PlantDataManager.PlantData;
 global using ZombieData = Il2Cpp.ZombieDataManager.ZombieData;

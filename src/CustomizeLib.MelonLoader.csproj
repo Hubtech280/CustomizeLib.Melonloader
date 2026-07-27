@@ -6,18 +6,16 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <PlatformTarget>x64</PlatformTarget>
-    <!-- Binary/API compatibility contract for already compiled consumer mods. -->
-    <AssemblyName>CustomizeLib.BepInEx</AssemblyName>
-    <RootNamespace>CustomizeLib.BepInEx</RootNamespace>
+    <AssemblyName>CustomizeLib.MelonLoader</AssemblyName>
+    <RootNamespace>CustomizeLib.MelonLoader</RootNamespace>
     <AssemblyTitle>CustomizeLib.MelonLoader</AssemblyTitle>
     <Product>CustomizeLib.MelonLoader</Product>
-    <Description>MelonLoader port of CustomizeLib for Plants vs. Zombies Fusion 3.8.</Description>
+    <Description>MelonLoader port of CustomizeLib for Plants vs. Zombies Fusion 3.8.1.</Description>
     <PackageId>CustomizeLib.MelonLoader</PackageId>
-    <Version>3.8.0-ml.2</Version>
-    <InformationalVersion>3.8.0-ml.2</InformationalVersion>
-    <!-- Preserve the original 3.8 assembly identity for existing CustomizeLib references. -->
+    <Version>3.8.1-ml.1</Version>
+    <InformationalVersion>3.8.1-ml.1</InformationalVersion>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>3.8.0.2</FileVersion>
+    <FileVersion>3.8.1.1</FileVersion>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>../build/</OutputPath>
