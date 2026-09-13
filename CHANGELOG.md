@@ -2,6 +2,12 @@
 
 [Version française](CHANGELOG_FR.md)
 
+## 3.9.0-ml.1
+
+- Updated generated IL2CPP references and build metadata for PvZ Fusion 3.9.
+- Adapted zombie total-health handling to the 64-bit health values introduced in 3.9.
+- Verified a clean Release build and successful MelonLoader startup on PvZ Fusion 3.9.
+
 ## 3.8.1-ml.1
 
 - Updated the build target and generated IL2CPP references to PvZ Fusion 3.8.1.

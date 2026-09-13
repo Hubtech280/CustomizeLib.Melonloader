@@ -42,7 +42,7 @@ public static class PlantExtensions
 		}
 	}
 
-	public static int GetTotalHealth(this Zombie zombie)
+	public static long GetTotalHealth(this Zombie zombie)
 	{
 		return zombie.theHealth + zombie.theFirstArmorHealth + zombie.theSecondArmorHealth;
 	}

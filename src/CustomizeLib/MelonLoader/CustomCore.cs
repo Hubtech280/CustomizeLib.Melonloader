@@ -22,7 +22,7 @@ using UnityEngine;
 
 namespace CustomizeLib.MelonLoader;
 
-[BepInPlugin("salmon.inf75.pvzcustomization", "CustomizeLib.MelonLoader", "3.8.1-ml.1")]
+[BepInPlugin("salmon.inf75.pvzcustomization", "CustomizeLib.MelonLoader", "3.9.0-ml.1")]
 public class CustomCore : BasePlugin
 {
 	public static class TypeMgrExtra

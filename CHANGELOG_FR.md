@@ -2,6 +2,12 @@
 
 [English version](CHANGELOG.md)
 
+## 3.9.0-ml.1
+
+- Mise à jour des références IL2CPP générées et des métadonnées pour PvZ Fusion 3.9.
+- Adaptation du calcul des PV totaux aux valeurs de santé 64 bits introduites dans la 3.9.
+- Validation d'une compilation Release propre et d'un chargement MelonLoader réussi sur PvZ Fusion 3.9.
+
 ## 3.8.1-ml.1
 
 - Mise à jour de la cible de compilation et des références IL2CPP générées vers PvZ Fusion 3.8.1.
