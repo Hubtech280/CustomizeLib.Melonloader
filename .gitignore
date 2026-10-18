@@ -8,3 +8,7 @@ artifacts/
 *.user
 *.suo
 *.nupkg
+backups/
+**/bin/
+**/obj/
+*.log

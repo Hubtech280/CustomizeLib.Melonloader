@@ -107,8 +107,8 @@ public static class CreatePlantPatch
 		}
 	}
 
-	[HarmonyPatch("MixBombCheck")]
-	[HarmonyPrefix]
+	// PvZ Fusion 4.0.5.2 removed CreatePlant.MixBombCheck. Keep the
+	// implementation for reference, but do not register an invalid hook.
 	public static bool Prefix_MixBombCheck(CreatePlant __instance, ref int theBoxColumn, ref int theBoxRow, ref bool __result)
 	{
 

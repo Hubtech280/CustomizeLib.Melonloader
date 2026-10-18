@@ -2,6 +2,21 @@
 
 [English version](CHANGELOG.md)
 
+## 4.0.5.2-ml.5 — 2026-10-18
+
+- Mise à jour des références et métadonnées pour PvZ Fusion 4.0.5.2.
+- Retrait du patch MixBombCheck obsolète et des appels aux setters des collections TypeMgr désormais en lecture seule.
+- Restauration des entrées manquantes de statistiques et de déblocage des plantes personnalisées après l'initialisation native. Les valeurs de déblocage existantes sont conservées.
+- Ajout de diagnostics d'almanach limités à six entrées par session.
+- Conservation du placement natif en désactivant l'ancien gestionnaire de clics personnalisés responsable de crashs CLR. Ce gestionnaire n'est pas disponible dans cette version.
+- Compilation et audit hors jeu des cibles de patch avec les assemblies du jeu installé. Toutes les fonctionnalités des mods consommateurs n'ont pas été vérifiées.
+
+## 4.0.0-ml.1
+
+- Recompilation avec les wrappers IL2CPP générés depuis PvZ Fusion 4.0.
+- Mise à jour des métadonnées du paquet et du mod pour la cible 4.0.
+- Conservation du chemin natif sûr pour le placement à la souris utilisé par le port 3.9.
+
 ## 3.9.0-ml.1
 
 - Mise à jour des références IL2CPP générées et des métadonnées pour PvZ Fusion 3.9.

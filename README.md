@@ -1,15 +1,15 @@
-# CustomizeLib.MelonLoader 3.9
+# CustomizeLib.MelonLoader 4.0.5.2-ml.5
 
 [Version française](README_FR.md)
 
-Unofficial MelonLoader port of CustomizeLib for **Plants vs. Zombies Fusion 3.9**, **MelonLoader 0.7.3**, **IL2CPP**, and **.NET 6**.
+Unofficial MelonLoader port of CustomizeLib for **Plants vs. Zombies Fusion 4.0.5.2**, **MelonLoader 0.7.3**, **IL2CPP**, and **.NET 6**.
 
 > Original CustomizeLib by **Infinite75**. MelonLoader port maintained by **Hubtech280**.
 
 ## Port status
 
-- MelonLoader detects and loads the library as `CustomizeLib.MelonLoader v3.9.0-ml.1`.
-- The project builds against the exact PvZ Fusion 3.9 and MelonLoader 0.7.3 assemblies.
+- The release assembly is `CustomizeLib.MelonLoader v4.0.5.2-ml.5`.
+- The project builds against PvZ Fusion 4.0.5.2 and MelonLoader 0.7.3 assemblies. The release DLL matches the locally installed library used with PvZ Fusion+.
 - A consumer mod based on `CorePlugin` successfully compiles against this port.
 - Static validation confirms that the resulting assembly has no external BepInEx dependency.
 - Full in-game coverage of every CustomizeLib feature is still being tested.
@@ -18,7 +18,7 @@ The project, output DLL, assembly identity, public namespace, MelonLoader entry,
 
 ## Installation
 
-1. Install MelonLoader 0.7.3 on PvZ Fusion 3.9.
+1. Install MelonLoader 0.7.3 on PvZ Fusion 4.0.5.2.
 2. Launch the game once so that `MelonLoader/Il2CppAssemblies` is generated.
 3. Remove every older BepInEx or MelonLoader copy of CustomizeLib.
 4. Copy `CustomizeLib.MelonLoader.dll` into the game's `Mods` directory.
@@ -91,6 +91,16 @@ The output is written to `build/CustomizeLib.MelonLoader.dll`.
 - decompiler-only IL diagnostic comments removed from the source tree.
 
 This compatibility layer is not a general BepInEx implementation.
+
+## 4.0.5.2 compatibility and limitations
+
+- Restores missing custom plant unlock/stat entries after native initialization, without changing existing unlock values.
+- Removes the hook for `CreatePlant.MixBombCheck`, which no longer exists in this game version.
+- Updates the TypeMgr registration path for getter-only collections.
+- Keeps native mouse placement active. The legacy custom-click dispatcher is bypassed to avoid a fatal CLR error; mods relying on that dispatcher need another input path.
+- Custom Almanac diagnostics are limited to six entries per session.
+
+This is a compatibility port, not a promise that every older mod works unchanged. Consumer mods may need rebuilding or their own game-version fixes. See [release notes](GITHUB_RELEASE_NOTES.md).
 
 ## Reporting an issue
 

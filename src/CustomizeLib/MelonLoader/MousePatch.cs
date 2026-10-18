@@ -29,6 +29,15 @@ public static class MousePatch
 	[HarmonyPrefix]
 	public static bool PreMouseClick(Mouse __instance)
 	{
+		// PvZ Fusion 3.9's IL2CPP runtime fatally fails while compiling the
+		// managed custom-click dispatcher. No installed Plants+ feature
+		// registers an event in that dispatcher, so preserve the game's native
+		// Mouse.Update path instead of crashing on every placement click.
+		return true;
+	}
+
+	private static bool HandleCustomPlantClick(Mouse __instance)
+	{
 
 
 

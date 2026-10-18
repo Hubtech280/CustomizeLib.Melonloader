@@ -2,6 +2,21 @@
 
 [Version française](CHANGELOG_FR.md)
 
+## 4.0.5.2-ml.5 — 2026-10-18
+
+- Updated game references and runtime metadata for PvZ Fusion 4.0.5.2.
+- Removed the obsolete MixBombCheck hook and setter calls on getter-only TypeMgr collections.
+- Restored missing custom plant unlock/stat entries after native initialization and unlock updates. Existing unlock values are retained.
+- Added limited custom Almanac card diagnostics (six per session).
+- Preserved native placement by bypassing the legacy custom-click dispatcher that caused fatal CLR errors. This dispatcher is not available in this build.
+- Release build and offline patch-target audit checked against the installed game assemblies. Full coverage of consumer mods remains unverified.
+
+## 4.0.0-ml.1
+
+- Rebuilt against the generated IL2CPP wrappers from PvZ Fusion 4.0.
+- Updated package and runtime metadata for the 4.0 target.
+- Kept the safe native mouse-placement path used by the 3.9 port.
+
 ## 3.9.0-ml.1
 
 - Updated generated IL2CPP references and build metadata for PvZ Fusion 3.9.

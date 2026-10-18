@@ -1,15 +1,15 @@
-# CustomizeLib.MelonLoader 3.9
+# CustomizeLib.MelonLoader 4.0.5.2-ml.5
 
 [English version](README.md)
 
-Port non officiel de CustomizeLib vers MelonLoader pour **Plants vs. Zombies Fusion 3.9**, **MelonLoader 0.7.3**, **IL2CPP** et **.NET 6**.
+Port non officiel de CustomizeLib vers MelonLoader pour **Plants vs. Zombies Fusion 4.0.5.2**, **MelonLoader 0.7.3**, **IL2CPP** et **.NET 6**.
 
 > Original CustomizeLib by **Infinite75**. MelonLoader port maintained by **Hubtech280**.
 
 ## État du port
 
-- MelonLoader détecte et charge la bibliothèque sous le nom `CustomizeLib.MelonLoader v3.9.0-ml.1`.
-- Le projet compile contre les assemblies exactes de PvZ Fusion 3.9 et MelonLoader 0.7.3.
+- La bibliothèque porte la version `CustomizeLib.MelonLoader v4.0.5.2-ml.5`.
+- Le projet compile avec les assemblies de PvZ Fusion 4.0.5.2 et MelonLoader 0.7.3. La DLL de release est identique à la bibliothèque installée localement et utilisée avec PvZ Fusion+.
 - Un mod consommateur basé sur `CorePlugin` compile contre cette version.
 - Une validation statique confirme l'absence de dépendance externe à BepInEx.
 - Les tests complets de toutes les fonctionnalités en jeu restent en cours.
@@ -18,7 +18,7 @@ Le projet, la DLL générée, l'identité de l'assembly, le namespace public, l'
 
 ## Installation
 
-1. Installe MelonLoader 0.7.3 sur PvZ Fusion 3.9.
+1. Installe MelonLoader 0.7.3 sur PvZ Fusion 4.0.5.2.
 2. Lance une première fois le jeu pour générer `MelonLoader/Il2CppAssemblies`.
 3. Retire toute ancienne copie BepInEx ou MelonLoader de CustomizeLib.
 4. Copie `CustomizeLib.MelonLoader.dll` dans le dossier `Mods` du jeu.
@@ -91,6 +91,16 @@ La DLL est générée dans `build/CustomizeLib.MelonLoader.dll`.
 - suppression des commentaires de diagnostic IL ajoutés par le décompilateur.
 
 Cette couche n'est pas une implémentation générale de BepInEx.
+
+## Compatibilité 4.0.5.2 et limites
+
+- Restaure les données manquantes de déblocage et de statistiques des plantes personnalisées après l'initialisation native, sans modifier les valeurs existantes.
+- Retire le patch de `CreatePlant.MixBombCheck`, méthode absente de cette version du jeu.
+- Adapte l'enregistrement aux collections TypeMgr accessibles en lecture seule.
+- Conserve le placement natif à la souris. L'ancien gestionnaire de clics personnalisés est désactivé pour éviter une erreur CLR fatale ; les mods qui en dépendent doivent utiliser un autre système d'entrée.
+- Limite les diagnostics de cartes d'almanach personnalisées à six entrées par session.
+
+Il s'agit d'un port de compatibilité, pas d'une garantie pour tous les anciens mods. Certains nécessitent une recompilation ou leurs propres adaptations. Voir les [notes de release](GITHUB_RELEASE_NOTES.md).
 
 ## Rapporter un problème
 

@@ -2,7 +2,7 @@
 
 [Version française](CONTRIBUTING_FR.md)
 
-This port specifically targets PvZ Fusion 3.9 and MelonLoader 0.7.3.
+This port specifically targets PvZ Fusion 4.0.5.2 and MelonLoader 0.7.3.
 
 Before submitting a change:
 

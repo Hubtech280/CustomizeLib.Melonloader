@@ -73,3 +73,31 @@ public static class AlmanacDataLoaderPatch
 		}
 	}
 }
+
+[HarmonyPatch(typeof(AlmanacPlantMenu), "SetCard", new System.Type[] { typeof(UnityEngine.Transform), typeof(PlantType) })]
+public static class AlmanacCustomCardDiagnosticPatch
+{
+	private static int logged;
+
+	[HarmonyPrefix]
+	[HarmonyPriority(Priority.Last)]
+	public static void BeforeSetCard(PlantType thePlantType)
+	{
+		if (!CustomCore.CustomPlants.ContainsKey(thePlantType))
+			return;
+		CustomPlantUnlockPatch.EnsureCustomPlantEntries();
+		if (logged >= 6)
+			return;
+		logged++;
+		var data = AlmanacDataLoader.plantDatas;
+		var unlocks = PlantDataManager.unlocked;
+		var manager = GameAPP.resourcesManager;
+		CustomCore.CLogger?.LogWarning(
+			$"[CustomizeLib] Almanac card diagnostic ID={(int)thePlantType}" +
+			$" | Info={data != null && data.ContainsKey(thePlantType)}" +
+			$" | PlantData={PlantDataManager.PlantData_Default != null && PlantDataManager.PlantData_Default.ContainsKey(thePlantType)}" +
+			$" | Unlock={unlocks != null && unlocks.ContainsKey(thePlantType)}" +
+			$" | Prefab={manager != null && manager.plantPrefabs != null && manager.plantPrefabs.ContainsKey(thePlantType)}" +
+			$" | Preview={manager != null && manager.plantPreviews != null && manager.plantPreviews.ContainsKey(thePlantType)}");
+	}
+}

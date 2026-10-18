@@ -1,29 +1,31 @@
-# CustomizeLib.MelonLoader 3.9.0-ml.1
+# CustomizeLib.MelonLoader 4.0.5.2-ml.5
 
-Compatibility update for **Plants vs. Zombies Fusion 3.9**.
+Compatibility update for **PvZ Fusion 4.0.5.2**, using **MelonLoader 0.7.3** (IL2CPP / .NET 6).
 
-This release updates the MelonLoader port of CustomizeLib for the new PvZ Fusion 3.9 IL2CPP assemblies. It does not add a new content API; its purpose is to keep CustomizeLib-based mods working against the 3.9 game update.
+## English
 
-## Requirements
+- Updates the game references and library metadata for 4.0.5.2.
+- Removes an obsolete placement hook and adapts registration to getter-only TypeMgr collections.
+- Restores missing custom plant unlock and stat records after native initialization, preserving existing unlock values.
+- Keeps native mouse placement active to avoid the legacy custom-click dispatcher's fatal CLR error.
 
-- PvZ Fusion 3.9
-- MelonLoader 0.7.3
+**Known limitation:** the legacy custom-click dispatcher is bypassed. Mods relying on it need an alternative input handler. Older mods may also need rebuilding or separate compatibility updates.
 
-## Installation
+Installation: close the game, remove older CustomizeLib copies, then extract `CustomizeLib.MelonLoader.dll` into `Mods`. Keep external skins in `Mods/Skin`. Do not load the BepInEx and MelonLoader editions together. The game, MelonLoader and generated game assemblies are not included.
 
-1. Install MelonLoader 0.7.3 on PvZ Fusion 3.9.
-2. Launch the game once so `MelonLoader/Il2CppAssemblies` is generated.
-3. Remove every older copy of CustomizeLib from the game.
-4. Copy `CustomizeLib.MelonLoader.dll` into the game's `Mods` folder.
-5. Keep external CustomizeLib skins in `Mods/Skin`.
+Validation: clean compilation and offline patch-target checks against 4.0.5.2; the packaged DLL matches the locally installed library used with PvZ Fusion+. This does not establish full compatibility with every consumer mod.
 
-Do not load the old BepInEx and MelonLoader versions of CustomizeLib at the same time.
+## Français
 
-## Changes
+- Mise à jour des références et des métadonnées pour la 4.0.5.2.
+- Retrait d'un ancien patch de placement et adaptation aux collections TypeMgr accessibles en lecture seule.
+- Restauration des données de statistiques et de déblocage manquantes pour les plantes personnalisées, sans modifier les valeurs de déblocage existantes.
+- Conservation du placement natif pour éviter le crash CLR de l'ancien gestionnaire de clics personnalisés.
 
-- Updated generated IL2CPP references and build metadata for PvZ Fusion 3.9.
-- Adapted zombie total-health handling to the 64-bit health values used by PvZ Fusion 3.9.
-- Updated the library version to `3.9.0-ml.1`.
-- Verified a clean Release build and successful MelonLoader startup on PvZ Fusion 3.9.
+**Limite connue :** cet ancien gestionnaire de clics est désactivé. Les mods qui l'utilisent doivent prévoir un autre système d'entrée. Les anciens mods peuvent aussi nécessiter une recompilation ou leurs propres correctifs.
 
-See the [complete changelog](CHANGELOG.md) for previous versions.
+Installation : ferme le jeu, retire les anciennes copies de CustomizeLib, puis place `CustomizeLib.MelonLoader.dll` dans `Mods`. Les skins externes restent dans `Mods/Skin`. Ne charge pas les éditions BepInEx et MelonLoader ensemble. Le jeu, MelonLoader et les assemblies générées ne sont pas inclus.
+
+Vérifications : compilation et contrôle hors jeu des cibles de patch en 4.0.5.2 ; la DLL du paquet est identique à celle installée localement et utilisée avec PvZ Fusion+. Cela ne garantit pas toutes les fonctionnalités de tous les mods consommateurs.
+
+Original CustomizeLib: **Infinite75**. MelonLoader port: **Hubtech280**. Attribution and redistribution terms are unchanged; see the README.

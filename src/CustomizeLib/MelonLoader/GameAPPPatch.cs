@@ -148,6 +148,7 @@ public static class GameAPPPatch
 		{
 			((System.IDisposable)enumerator).Dispose();
 		}
+		CustomPlantUnlockPatch.EnsureCustomPlantEntries();
 		var enumerator2 = CustomCore.CustomFusions.GetEnumerator();
 		try
 		{
@@ -324,5 +325,59 @@ public static class GameAPPPatch
 			((System.IDisposable)enumerator10).Dispose();
 		}
 		((MonoBehaviour)(object)GameAPP.Instance).StartCoroutine(PatchMgr.RegisterSkin());
+	}
+}
+
+// Fusion 4.0 added a separate unlock dictionary. Custom plants are registered
+// after the game's initial unlock pass, so AlmanacCardUI otherwise throws from
+// PlantDataManager.IsUnlocked for every custom PlantType.
+[HarmonyPatch]
+public static class CustomPlantUnlockPatch
+{
+	[HarmonyPostfix]
+	[HarmonyPatch(typeof(PlantDataManager), nameof(PlantDataManager.Init))]
+	public static void AfterInit()
+	{
+		EnsureCustomPlantEntries();
+	}
+
+	[HarmonyPostfix]
+	[HarmonyPatch(typeof(PlantDataManager), nameof(PlantDataManager.UpdateUnlockStatus))]
+	public static void AfterUnlockStatusUpdate()
+	{
+		EnsureCustomPlantEntries();
+	}
+
+	public static void EnsureCustomPlantEntries()
+	{
+		var unlocked = PlantDataManager.unlocked;
+		if (unlocked == null || CustomCore.CustomPlants.Count == 0)
+			return;
+
+		int added = 0;
+		int plantDataAdded = 0;
+		var plantData = PlantDataManager.PlantData_Default;
+		foreach (var customPlant in CustomCore.CustomPlants)
+		{
+			PlantType plantType = customPlant.Key;
+			if (plantData != null && customPlant.Value.PlantData != null &&
+				!plantData.ContainsKey(plantType))
+			{
+				plantData.Add(plantType, customPlant.Value.PlantData);
+				plantDataAdded++;
+			}
+			if (unlocked.ContainsKey(plantType))
+				continue;
+
+			// Existing entries keep their native progression value. Custom entries
+			// have no 4.0 unlock-track record; preserve their Almanac availability.
+			unlocked.Add(plantType, true);
+			added++;
+		}
+
+		if (added > 0)
+			CustomCore.CLogger?.LogInfo($"[CustomizeLib] Added {added} custom plant unlock entries for PvZ Fusion 4.0.");
+		if (plantDataAdded > 0)
+			CustomCore.CLogger?.LogInfo($"[CustomizeLib] Restored {plantDataAdded} custom plant stat entries after native initialization.");
 	}
 }

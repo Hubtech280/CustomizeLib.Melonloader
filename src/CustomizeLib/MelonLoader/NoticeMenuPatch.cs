@@ -64,7 +64,8 @@ public static class NoticeMenuPatch
 			{
 				((System.IDisposable)enumerator).Dispose();
 			}
-			property.SetValue((object)null, (object)hashSet);
+			// Fusion 4.0.5.2 exposes this collection through a getter only.
+			// Mutating the returned HashSet already updates the game's set.
 			PropertyInfo property2 = typeof(TypeMgr).GetProperty("UncrashablePlants", (BindingFlags)24);
 			if (property2 == null)
 			{
@@ -89,7 +90,7 @@ public static class NoticeMenuPatch
 			{
 				((System.IDisposable)enumerator2).Dispose();
 			}
-			property2.SetValue((object)null, (object)hashSet2);
+			// Like RedPlant, this property has no setter in 4.0.5.2.
 			PatchMgr.Load = true;
 			var enumerator3 = CorePlugin.OnGameInitAction.GetEnumerator();
 			try
