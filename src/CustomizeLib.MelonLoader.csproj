@@ -10,12 +10,12 @@
     <RootNamespace>CustomizeLib.MelonLoader</RootNamespace>
     <AssemblyTitle>CustomizeLib.MelonLoader</AssemblyTitle>
     <Product>CustomizeLib.MelonLoader</Product>
-    <Description>MelonLoader port of CustomizeLib for Plants vs. Zombies Fusion 4.0.5.2.</Description>
+    <Description>MelonLoader port of CustomizeLib for Plants vs. Zombies Fusion 4.1.</Description>
     <PackageId>CustomizeLib.MelonLoader</PackageId>
-    <Version>4.0.5.2-ml.5</Version>
-    <InformationalVersion>4.0.5.2-ml.5</InformationalVersion>
+    <Version>4.1.0-ml.1</Version>
+    <InformationalVersion>4.1.0-ml.1</InformationalVersion>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>4.0.5.2</FileVersion>
+    <FileVersion>4.1.0.1</FileVersion>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>../build/</OutputPath>

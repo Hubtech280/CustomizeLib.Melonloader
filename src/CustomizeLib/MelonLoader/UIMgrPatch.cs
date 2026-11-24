@@ -125,7 +125,8 @@ public static class UIMgrPatch
 		Time.timeScale = GameAPP.config.gameSpeed;
 		GameAPP.theBoardType = levelType;
 		GameAPP.theBoardLevel = levelNumber;
-		RogueManager.Instance.Clear();
+		// The legacy RogueManager and its Clear method no longer exist in 4.1.
+		// Do not clear the new TravelRogueManager's persistent run/progression data.
 		if ((Object)(object)TravelMgr.Instance != null)
 		{
 			Object.Destroy((Object)(object)TravelMgr.Instance);

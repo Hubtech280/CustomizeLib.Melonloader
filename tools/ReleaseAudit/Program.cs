@@ -21,7 +21,8 @@ if (assembly.GetReferencedAssemblies().Any(a => a.Name!.StartsWith("BepInEx")))
 string? version = assembly.GetCustomAttributesData().First(a =>
     a.AttributeType.FullName == "System.Reflection.AssemblyInformationalVersionAttribute")
     .ConstructorArguments[0].Value as string;
-if (version?.Split('+')[0] != "4.0.5.2-ml.5") throw new Exception("Unexpected release version: " + version);
+string expectedVersion = args.Length > 2 ? args[2] : "4.0.5.2-ml.5";
+if (version?.Split('+')[0] != expectedVersion) throw new Exception("Unexpected release version: " + version);
 int patches = 0;
 foreach (Type type in assembly.GetTypes())
 {

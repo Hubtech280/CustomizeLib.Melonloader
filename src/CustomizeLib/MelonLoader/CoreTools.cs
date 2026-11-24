@@ -50,7 +50,8 @@ public static class CoreTools
 		TravelDictionary.debuffData = new Il2CppSystem.Collections.Generic.Dictionary<TravelDebuff, Il2CppSystem.ValueTuple<string, ZombieType>>();
 		TravelDictionary.PlantInfo = new Il2CppSystem.Collections.Generic.Dictionary<PlantType, Il2CppSystem.ValueTuple<Il2CppSystem.Nullable<PlantType>, Il2CppSystem.Object, Il2CppSystem.Object, bool>>();
 		TravelDictionary.RandomBuffs = new Il2CppSystem.Collections.Generic.HashSet<AdvBuff>();
-		TravelDictionary.RogueBuffs = new Il2CppSystem.Collections.Generic.HashSet<AdvBuff>();
+		// 4.1 removed the legacy Rogue buff set. Do not overwrite the new
+		// TravelRogueManager's unrelated progression data with an empty set.
 		TravelDictionary.ultimateBuffsText = new Il2CppSystem.Collections.Generic.Dictionary<UltiBuff, string>();
 		TravelDictionary.unlocksText = new Il2CppSystem.Collections.Generic.Dictionary<TravelUnlocks, string>();
 	}

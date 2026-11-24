@@ -1,24 +1,16 @@
-# CustomizeLib.MelonLoader 4.0.5.2-ml.5
+# CustomizeLib.MelonLoader 4.1.0-ml.1
+
+Unofficial CustomizeLib port for **PvZ Fusion 4.1**, **MelonLoader 0.7.3**, **IL2CPP**, and **.NET 6**.
 
 [Version française](README_FR.md)
 
-Unofficial MelonLoader port of CustomizeLib for **Plants vs. Zombies Fusion 4.0.5.2**, **MelonLoader 0.7.3**, **IL2CPP**, and **.NET 6**.
-
 > Original CustomizeLib by **Infinite75**. MelonLoader port maintained by **Hubtech280**.
 
-## Port status
-
-- The release assembly is `CustomizeLib.MelonLoader v4.0.5.2-ml.5`.
-- The project builds against PvZ Fusion 4.0.5.2 and MelonLoader 0.7.3 assemblies. The release DLL matches the locally installed library used with PvZ Fusion+.
-- A consumer mod based on `CorePlugin` successfully compiles against this port.
-- Static validation confirms that the resulting assembly has no external BepInEx dependency.
-- Full in-game coverage of every CustomizeLib feature is still being tested.
-
-The project, output DLL, assembly identity, public namespace, MelonLoader entry, logs, and file metadata all use the `CustomizeLib.MelonLoader` name. BepInEx is neither loaded nor required.
+BepInEx is not required. See the [4.1 validation report](docs/2026-11-10-fusion41.md) for test scope and limitations.
 
 ## Installation
 
-1. Install MelonLoader 0.7.3 on PvZ Fusion 4.0.5.2.
+1. Install MelonLoader 0.7.3 on PvZ Fusion 4.1.
 2. Launch the game once so that `MelonLoader/Il2CppAssemblies` is generated.
 3. Remove every older BepInEx or MelonLoader copy of CustomizeLib.
 4. Copy `CustomizeLib.MelonLoader.dll` into the game's `Mods` directory.

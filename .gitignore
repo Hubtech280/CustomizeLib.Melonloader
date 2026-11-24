@@ -4,6 +4,8 @@
 src/bin/
 src/obj/
 build/
+build41/
+build41-baseline/
 artifacts/
 *.user
 *.suo

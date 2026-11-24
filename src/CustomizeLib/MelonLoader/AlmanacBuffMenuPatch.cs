@@ -334,7 +334,9 @@ public static class AlmanacBuffMenuPatch
 					break;
 				case AlmanacBuffType.Rogue:
 					obj2 = Il2CppExtensions.BoxEnumToIl2Object<AdvBuff>((object)item7);
-					list2 = __instance.rogueBuffs;
+					// Keep legacy consumer registrations visible: 4.1 has no Rogue
+					// almanac tab. These remain ordinary AdvBuff entries, not Shooting buffs.
+					list2 = __instance.generalBuffs;
 					break;
 				case AlmanacBuffType.Combo:
 					obj2 = Il2CppExtensions.BoxEnumToIl2Object<AdvBuff>((object)item7);
